@@ -27,10 +27,11 @@ final class Solution {
     Need to write the power function and print the output.
     @param    base   the base
     @param    exponent  the exponent
+    @return   return the value for the function
     */
     static long power(final int base, final int exponent) {
         /**.
-            @return returns the value
+            power function
         **/
         if (exponent > 0) {
             return base * power(base, exponent - 1);
