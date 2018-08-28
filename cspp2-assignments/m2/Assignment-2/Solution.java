@@ -24,7 +24,9 @@ public final class Solution
 	ion function and print the output.
 	*/
 	static void rootsOfQuadraticEquation(final double a, final double b, final double c)
-	{/*THIS IS THE FUCTION IMPLEMENTATION*/
+	{/**
+		* square roots
+		*/
 		double root1;
 		double root2;
 		root1 = (-b+(Math.sqrt(Math.abs(b*b)-2*2*a*c)))/(2*a);
