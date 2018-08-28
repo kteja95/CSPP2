@@ -8,7 +8,7 @@ public class Solution
 	*/
 	public static void main(String[] args) 
 	{
-		System.out.println("Enter the values of a, b, c");
+		// System.out.println("Enter the values of a, b, c");
 		Scanner scan = new Scanner(System.in);
 		double a = scan.nextInt();
 		double b = scan.nextInt();
