@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**.
 Main class
 */
-public class Solution
+final class Solution
 {
     /*
     Do not modify this main function.
@@ -16,7 +16,7 @@ public class Solution
     /**.
         * @param  args the argments
         */
-    public static void main(String[] args) {    
+    public static void main(final String[] args) {    
     //THIS IS THE MAIN FUNCTION//
         Scanner s = new Scanner(System.in);
         final int base = s.nextInt();
