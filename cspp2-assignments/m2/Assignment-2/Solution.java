@@ -20,14 +20,15 @@ public final class Solution
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
+	Need to write the rootsOfQuadraticEquat
+	ion function and print the output.
 	*/
 	static void rootsOfQuadraticEquation(final double a, final double b, final double c)
 	{/*THIS IS THE FUCTION IMPLEMENTATION*/
 		double root1;
 		double root2;
-		root1 = (-b + (Math.sqrt(Math.abs(b * b) - 2*2 * a * c))) / (2*a);
-		root2 = (-b - (Math.sqrt(Math.abs(b * b) - 2*2 * a * c))) / (2*a);
+		root1 = (-b+(Math.sqrt(Math.abs(b*b)-2*2*a*c)))/(2*a);
+		root2 = (-b-(Math.sqrt(Math.abs(b*b)-2*2*a*c)))/(2*a);
 		System.out.println(root1+" "+root2);
 	}
 }
