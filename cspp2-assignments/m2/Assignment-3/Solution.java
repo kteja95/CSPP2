@@ -8,7 +8,7 @@ final class Solution {
     */
     private Solution() {
         /**.
-           *@constructor
+           * @constructor
         */
 
     }
