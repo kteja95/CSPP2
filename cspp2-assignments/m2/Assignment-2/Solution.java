@@ -1,6 +1,8 @@
 import java.util.Scanner;
 // import java.lang.Math;
-
+/**
+Main class
+*/
 public final class Solution {
     /**.
     Do not modify this main function.
@@ -8,7 +10,7 @@ public final class Solution {
     private Solution() {
         /** This is the constructor**/
 
-    }
+    }/**Function*/
     public static void main(final String[] args) {
         /**.THIS IS THE MAIN FUNCTION**/
         Scanner scan = new Scanner(System.in);
@@ -17,7 +19,7 @@ public final class Solution {
         double c = scan.nextInt();
         r(a, b, c);
     }
-    /*
+    /**.
     Need to write the rootsOfQuadraticEquat
     ion function and print the output.
     */
