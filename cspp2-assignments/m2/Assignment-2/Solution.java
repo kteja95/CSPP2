@@ -1,14 +1,18 @@
 import java.util.Scanner;
 import java.lang.*;
 
-public class Solution 
+public final class Solution 
 {
 	/*
 	Do not modify this main function.
 	*/
-	public static void main(String[] args) 
+	private Solution()
 	{
-		// System.out.println("Enter the values of a, b, c");
+		/* This is the constructor*/
+
+	}
+	public static void main(final String[] args)
+	{/*THIS IS THE MAIN FUNCTION*/
 		Scanner scan = new Scanner(System.in);
 		double a = scan.nextInt();
 		double b = scan.nextInt();
@@ -18,13 +22,12 @@ public class Solution
 	/*
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
-	static void rootsOfQuadraticEquation(double a, double b, double c)
-	{
+	static void rootsOfQuadraticEquation(final double a, final double b, final double c)
+	{/*THIS IS THE FUCTION IMPLEMENTATION*/
 		double root1;
 		double root2;
-		root1 = (-b+(Math.sqrt(Math.abs(b*b)-4*a*c)))/(2*a);
-		root2 = (-b-(Math.sqrt(Math.abs(b*b)-4*a*c)))/(2*a);
+		root1 = (-b + (Math.sqrt(Math.abs(b * b) - 4 * a * c))) / (2*a);
+		root2 = (-b - (Math.sqrt(Math.abs(b * b) - 4 * a * c))) / (2*a);
 		System.out.println(root1+" "+root2);
-		
 	}
 }
