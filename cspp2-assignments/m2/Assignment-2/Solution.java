@@ -8,9 +8,15 @@ public final class Solution {
     Do not modify this main function.
     **/
     private Solution() {
-        /** This is the constructor**/
+        /**
+           *@constructor
+        */
 
-    }/**.Function*/
+    }/**.Function
+        * @param  args the argments
+        */
+
+
     public static void main(final String[] args) {
         /**.THIS IS THE MAIN FUNCTION**/
         Scanner scan = new Scanner(System.in);
