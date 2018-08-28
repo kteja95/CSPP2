@@ -4,13 +4,13 @@ import java.util.Scanner;
 public final class Solution{
 	/**
 	Do not modify this main function.
-	*/
+	**/
 	private Solution(){
-		/* This is the constructor*/
+		/** This is the constructor**/
 
 	}
 	public static void main(final String[] args){
-		/*THIS IS THE MAIN FUNCTION*/
+		/**THIS IS THE MAIN FUNCTION**/
 		Scanner scan = new Scanner(System.in);
 		double a = scan.nextInt();
 		double b = scan.nextInt();
@@ -23,8 +23,8 @@ public final class Solution{
 	*/
 	static void rootsOfQuadraticEquation(final double a, final double b, final double c){
 	/**
-		* square roots
-		*/
+		 square roots
+		**/
 		double root1;
 		double root2;
 		root1 = (-b + (Math.sqrt(Math.abs(b * b) - 2 * 2 * a * c))) / (2 * a);
