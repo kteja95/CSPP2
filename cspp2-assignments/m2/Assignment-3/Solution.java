@@ -2,13 +2,12 @@ import java.util.Scanner;
 /**.
 Main class
 */
-final class Solution
-{
+final class Solution {
     /*
     Do not modify this main function.
     */
     private Solution() {
-        /**
+        /**.
            *@constructor
         */
 
