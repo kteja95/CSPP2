@@ -1,15 +1,15 @@
 import java.util.Scanner;
 // import java.lang.Math;
 
-public final class Solution{
+public final class Solution {
 	/**
 	Do not modify this main function.
 	**/
-	private Solution(){
+	private Solution() {
 		/** This is the constructor**/
 
 	}
-	public static void main(final String[] args){
+	public static void main(final String[] args) {
 		/**THIS IS THE MAIN FUNCTION**/
 		Scanner scan = new Scanner(System.in);
 		double a = scan.nextInt();
@@ -21,7 +21,7 @@ public final class Solution{
 	Need to write the rootsOfQuadraticEquat
 	ion function and print the output.
 	*/
-	static void rootsOfQuadraticEquation(final double a, final double b, final double c){
+	static void rootsOfQuadraticEquation(final double a, final double b, final double c) {
 	/**
 		 square roots
 		**/
