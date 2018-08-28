@@ -10,7 +10,7 @@ public final class Solution {
     private Solution() {
         /** This is the constructor**/
 
-    }/**.Function*/
+}/**.Function*/
     public static void main(final String[] args) {
         /**.THIS IS THE MAIN FUNCTION**/
         Scanner scan = new Scanner(System.in);
