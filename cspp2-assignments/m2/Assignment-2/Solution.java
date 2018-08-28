@@ -23,7 +23,7 @@ public final class Solution {
     */
     static void rootsOfQuadraticEquation(final double a, final double b, final double c) {
     /**.
-         square roots
+         square roots.
         **/
         double r1;
         double r2;
