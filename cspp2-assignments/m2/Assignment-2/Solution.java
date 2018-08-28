@@ -2,7 +2,7 @@ import java.util.Scanner;
 // import java.lang.Math;
 
 public final class Solution{
-	/*
+	/**
 	Do not modify this main function.
 	*/
 	private Solution(){
