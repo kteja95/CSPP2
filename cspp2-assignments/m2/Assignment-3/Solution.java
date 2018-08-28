@@ -7,7 +7,7 @@ final class Solution {
     Do not modify this main function.
     */
     private Solution() {
-        /**
+        /**.
            *@constructor
         */
 
