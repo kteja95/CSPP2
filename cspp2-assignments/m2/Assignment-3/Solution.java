@@ -23,12 +23,11 @@ final class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    
-
     /**.
     Need to write the power function and print the output.
     @param    base   the base
     @param    exponent  the exponent
+    @param    power    the function
     */
     static long power(final int base, final int exponent) {
         /**.
