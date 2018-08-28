@@ -2,7 +2,7 @@ import java.util.Scanner;
 // import java.lang.Math;
 
 public final class Solution {
-	/**
+	/**.
 	Do not modify this main function.
 	**/
 	private Solution() {
@@ -22,7 +22,7 @@ public final class Solution {
 	ion function and print the output.
 	*/
 	static void rootsOfQuadraticEquation(final double a, final double b, final double c) {
-	/**
+	/**.
 		 square roots
 		**/
 		double root1;
