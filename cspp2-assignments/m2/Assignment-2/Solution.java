@@ -15,13 +15,13 @@ public final class Solution {
         double a = scan.nextInt();
         double b = scan.nextInt();
         double c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        r(a, b, c);
     }
     /*
     Need to write the rootsOfQuadraticEquat
     ion function and print the output.
     */
-    static void rootsOfQuadraticEquation(final double a, final double b, final double c) {
+    static void r(final double a, final double b, final double c) {
     /**.
          square roots.
         **/
