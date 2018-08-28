@@ -16,7 +16,7 @@ final class Solution {
         * @param  args the argments
         */
     public static void main(final String[] args) {
-    //THIS IS THE MAIN FUNCTION//
+    /**.THIS IS THE MAIN FUNCTION**/
         Scanner s = new Scanner(System.in);
         final int base = s.nextInt();
         final int exponent = s.nextInt();
@@ -33,7 +33,8 @@ final class Solution {
     */
     static long power(final int base, final int exponent) {
         /**.
-        POWER*/
+        POWER
+        **/
         if (exponent > 0) {
             return base * power(base, exponent - 1);
         }
