@@ -24,8 +24,7 @@ public class Solution
 		double root2;
 		root1 = (-b+(Math.sqrt(Math.abs(b*b)-4*a*c)))/(2*a);
 		root2 = (-b-(Math.sqrt(Math.abs(b*b)-4*a*c)))/(2*a);
-		System.out.println(root1);
-		System.out.println(root2);
+		System.out.println(root1+" "+root2);
 		
 	}
 }
