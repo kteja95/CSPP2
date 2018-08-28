@@ -10,7 +10,7 @@ public final class Solution {
 
 	}
 	public static void main(final String[] args) {
-		/**THIS IS THE MAIN FUNCTION**/
+		/**.THIS IS THE MAIN FUNCTION**/
 		Scanner scan = new Scanner(System.in);
 		double a = scan.nextInt();
 		double b = scan.nextInt();
