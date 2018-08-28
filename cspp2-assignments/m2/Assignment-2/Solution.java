@@ -21,7 +21,11 @@ public final class Solution {
     }
     /**.
     Need to write the rootsOfQuadraticEquat
-    ion function and print the output.
+    @param    a   the coeffecient
+    @param    b   the coefficent
+    @param    c    the coeffeicti
+
+
     */
     static void r(final double a, final double b, final double c) {
     /**.
