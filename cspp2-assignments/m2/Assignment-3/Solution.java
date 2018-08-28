@@ -35,7 +35,7 @@ public class Solution
     static long power(final int base,final int exponent) {
         /**.
         POWER*/
-        if (exponent > 0){
+        if (exponent > 0) {
             return base * power(base, exponent - 1);
         }
         return 1;
