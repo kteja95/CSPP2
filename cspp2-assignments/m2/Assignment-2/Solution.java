@@ -30,7 +30,7 @@ public final class Solution
 		double root1;
 		double root2;
 		root1 = (-b + (Math.sqrt(Math.abs(b * b) - 2 * 2 * a * c))) / ( 2 * a);
-		root2 = (-b - (Math.sqrt(Math.abs(b * b) - 2 * 2 * a * c))) / ( 2 *a);
-		System.out.println(root1+" "+root2);
+		root2 = (-b - (Math.sqrt(Math.abs(b * b) - 2 * 2 * a * c))) / ( 2 * a);
+		System.out.println(root1+ " " +root2);
 	}
 }
