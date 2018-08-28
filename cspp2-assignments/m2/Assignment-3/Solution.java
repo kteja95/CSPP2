@@ -33,6 +33,8 @@ public class Solution
     @param    exponent  the exponent
     */
     static long power(final int base,final int exponent) {
+        /**.
+        POWER*/
         if (exponent > 0){
             return base * power(base, exponent - 1);
         }
