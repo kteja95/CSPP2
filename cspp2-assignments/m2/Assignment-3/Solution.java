@@ -30,7 +30,7 @@ final class Solution {
     */
     static long power(final int base, final int exponent) {
         /**.
-            pOWER The power function.
+            @return returns the value
         **/
         if (exponent > 0) {
             return base * power(base, exponent - 1);
