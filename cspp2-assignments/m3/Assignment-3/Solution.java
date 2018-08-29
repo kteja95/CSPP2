@@ -16,7 +16,7 @@ final class Solution {
     @param args the arguments
 */
     public static void main(final String[] args) {
-     Scanner s=new Scanner(System.in);      
+     Scanner s = new Scanner(System.in);
         final int n1 = s.nextInt();
         final int n2 = s.nextInt();
         System.out.println(gcd(n1,n2));
