@@ -20,9 +20,7 @@ final class Solution {
         final int n1 = s.nextInt();
         final int n2 = s.nextInt();
         System.out.println(gcd(n1,n2));
-        // int result = 0;
-        // result= System.out.println(gcd(n1,n2));
-    }
+}
     /*
     Need to write the gcd function and print the output.
     */
@@ -32,7 +30,7 @@ final class Solution {
             if (n1 %i == 0 && n2 % i == 0) {
                 if (temp < i) {;
                 temp = i;
-            }
+}
             }
         }
         return temp;
