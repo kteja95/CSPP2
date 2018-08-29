@@ -9,7 +9,7 @@ public class Solution
     public static void main(String[] args) 
     {
 
-  		System.out.println("Enter the limit");
+  		// System.out.println("Enter the limit");
         Scanner s=new Scanner(System.in);      
         int n = s.nextInt();
         int count = 0;
