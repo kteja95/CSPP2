@@ -6,6 +6,14 @@ import java.util.Scanner;
 public class Solution {
 /**. Fill the main function to print the number of 7's between 1 to n
 */
+	private Solution() {
+		/**.
+		    @constructor
+		    */
+	}
+/**.
+   @param args The arguments
+   */ 
 
     public static void main(final String[] args) {
 
