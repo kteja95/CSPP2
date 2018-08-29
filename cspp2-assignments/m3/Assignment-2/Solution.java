@@ -18,7 +18,7 @@ public class Solution {
         for(int i = 0; i <= n; i++) {
         	int temp = i;
         	while(temp > 0) {
-        		if (temp % f ==var) {
+        		if (temp % f == var) {
         			count = count + 1;
         		}
         	temp = Math.round(temp / f);
