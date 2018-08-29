@@ -3,11 +3,20 @@ import java.util.Scanner;
 /*
 	Do not modify this main function.
 	*/
-public class Solution 
+/**.
+    Solution the class
+*/
+final class Solution 
 {
-
-    public static void main(String[] args) 
-    {
+    private Solution() {
+        /**.
+        @constructor
+        */
+    }
+/**.
+    @param args the arguments
+*/
+    public static void main(final String[] args) {
 
         Scanner s=new Scanner(System.in);      
         int n1 = s.nextInt();
@@ -19,14 +28,11 @@ public class Solution
     /*
 	Need to write the gcd function and print the output.
 	*/
-    static int gcd(int n1, int n2)
-    {
-        int temp=1;
-        for(int i=1; i<=n1 && i<=n2; i++)
-        {
-            if(n1%i==0 && n2%i ==0)
-            {
-                if(temp<i);
+    static int gcd(int n1, int n2) {
+         int temp = 1;
+        for(int i=1; i <= n1 && i <= n2; i++) {
+            if(n1 %i ==0 && n2 % i ==0) {
+                if(temp < i);
                 temp = i;
             }
          
