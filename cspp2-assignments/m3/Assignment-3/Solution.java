@@ -1,8 +1,8 @@
 
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
 /**.
     Solution the class
 */
@@ -24,8 +24,8 @@ final class Solution {
         // result= System.out.println(gcd(n1,n2));
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
+    Need to write the gcd function and print the output.
+    */
     static int gcd(final int n1, final int n2) {
          int temp = 1;
         for (int i = 1; i <= n1 && i <= n2; i++) {
