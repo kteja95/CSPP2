@@ -29,9 +29,11 @@ final class Solution {
 /**.
     @param n1   the first number
     @param n2   the secind number
-    @param return  it returns the gcd
 */
     static int gcd(final int n1, final int n2) {
+        /**. 
+            @param return   it returns the gcd
+        */
          int temp = 1;
         for (int i = 1; i <= n1 && i <= n2; i++) {
             if (n1 % i == 0 && n2 % i == 0) {
