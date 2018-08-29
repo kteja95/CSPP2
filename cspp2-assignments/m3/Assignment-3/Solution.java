@@ -29,6 +29,7 @@ final class Solution {
 /**.
     @param n1   the first number
     @param n2   the secind number
+    @param return  it returns the gcd
 */
     static int gcd(final int n1, final int n2) {
          int temp = 1;
