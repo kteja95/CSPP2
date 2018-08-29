@@ -39,7 +39,7 @@ final class Solution {
             if (n1 % i == 0 && n2 % i == 0) {
                 if (temp < i) {
                 temp = i;
-}
+                }
             }
         }
         return temp;
