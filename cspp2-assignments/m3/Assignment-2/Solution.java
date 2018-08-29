@@ -10,18 +10,19 @@ public class Solution {
     public static void main(String[] args) {
 
   		// System.out.println("Enter the limit");
-        Scanner s=new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
         final int f = 10;
-        for(int i=0;i<=n;i++)
+        final int var = 7;
+        for(int i = 0; i <= n; i++)
         {
         	int temp = i;
-        	while(temp>0)
+        	while(temp > 0)
         	{
-        		if (temp%10 ==7)
+        		if (temp%10 ==var)
         		{
-        			count=count+1;
+        			count = count + 1;
         		}
         	temp = Math.round(temp/f);
         	}
