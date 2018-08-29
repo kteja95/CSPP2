@@ -32,7 +32,7 @@ final class Solution {
 */
     static int gcd(final int n1, final int n2) {
 /**
-    @param return   it returns the gcd
+    @ return   it returns the gcd
 */
          int temp = 1;
         for (int i = 1; i <= n1 && i <= n2; i++) {
