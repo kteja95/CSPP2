@@ -6,8 +6,7 @@ import java.util.Scanner;
 /**.
     Solution the class
 */
-final class Solution 
-{
+final class Solution {
     private Solution() {
         /**.
         @constructor
