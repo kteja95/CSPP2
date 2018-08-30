@@ -24,19 +24,19 @@ public class Solution {
         int p = s.nextInt();
         int q = s.nextInt();
         int[][] ar = new int[p][q];
-        for(int i = 0; i < p; i++)
+        for (int i = 0; i < p; i++)
         {
-            for(int j = 0; j<q; j++)
+            for (int j = 0; j<q; j++)
             {
                 ar[i][j] = s.nextInt();
             }
         }
         int[][] newarray = new int[n][m];
-    if(n == p && m == q)
+    if (n == p && m == q)
     {
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
-            for(int j = 0; j < m; j++)
+            for (int j = 0; j < m; j++)
             {
                 newarray[i][j] = arr[i][j] + ar[i][j];
             }
