@@ -50,6 +50,7 @@ public class Solution {
                 else
                     System.out.print(newarray[i][j]+" ");
             }
+        System.out.println();
         }
 
     }
