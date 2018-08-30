@@ -23,6 +23,7 @@ Do not modify the main function
 /**.
 @reverseString the function to reverse a given string.
 @return returns the string back to main
+@param s the string passed from function call
 */
 
     static String reverseString(final String s) {
