@@ -9,7 +9,7 @@ final class Solution {
         */
     }
     /**.
-    @param args
+    @param args the arguments
     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -49,7 +49,8 @@ final class Solution {
         }
 
     }
-    else
+    else {
         System.out.println("not possible");
+    }
     }
 }
