@@ -24,29 +24,24 @@ public class Solution {
             }
         }
         int[][] newarray = new int[n][m];
-        if(n==p && m==q)
+    if(n==p && m==q)
+    {
+        for(int i=0;i<n;i++)
         {
-            for(int i=0;i<n;i++)
+            for(int j =0;j<m;j++)
             {
-                for(int j =0;j<m;j++)
-                {
-                    newarray[i][j]=arr[i][j]+ar[i][j];
-                }
+                newarray[i][j]=arr[i][j]+ar[i][j];
             }
         }
-        else
-        {
-            System.out.println("not possible");
-        }
+    }
+        
         for(int i=0;i<n;i++)
         {
             for(int j=0;j<m;j++)
             {
-                System.out.println(newarray[i][j]);
+                System.out.print(newarray[i][j]);
             }
+        System.out.println();
         }
-
-        
-        
     }
 }
