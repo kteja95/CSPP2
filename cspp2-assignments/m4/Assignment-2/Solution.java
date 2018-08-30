@@ -33,10 +33,6 @@ public class Solution {
                 newarray[i][j]=arr[i][j]+ar[i][j];
             }
         }
-    }
-    else
-        System.out.println("not possible");
-        
         for(int i=0;i<n;i++)
         {
             for(int j=0;j<m;j++)
@@ -49,5 +45,10 @@ public class Solution {
             }
         System.out.println();
         }
+    }
+    else
+        System.out.println("not possible");
+        
+        
     }
 }
