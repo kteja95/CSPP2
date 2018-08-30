@@ -39,9 +39,11 @@ public class Solution {
         {
             for(int j=0;j<m;j++)
             {
-                System.out.print(newarray[i][j]+" ");
                 if(j==m-1)
                     System.out.print(newarray[i][j]);
+                else
+                    System.out.print(newarray[i][j]+" ");
+
             }
         System.out.println();
         }
