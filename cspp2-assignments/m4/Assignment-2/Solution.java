@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**. Solution the class
 */
 final class Solution {
-    /* Fill the main function to print resultant of addition of matrices*/
+    /**. Fill the main function to print resultant of addition of matrices*/
     private Solution() {
         /**.
         @constructor
@@ -38,9 +38,9 @@ final class Solution {
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if(j == m - 1) {
+                if (j == m - 1) {
                     System.out.print(newarray[i][j]);
-                }
+}
                 else {
                     System.out.print(newarray[i][j] + " ");
                 }
@@ -48,7 +48,7 @@ final class Solution {
         System.out.println();
         }
 
-    }
+}
     else {
         System.out.println("not possible");
     }
