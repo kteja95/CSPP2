@@ -41,6 +41,16 @@ public class Solution {
                 newarray[i][j] = arr[i][j] + ar[i][j];
             }
         }
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                if(j==m-1)
+                    System.out.print(newarray[i][j]);
+                else
+                    System.out.println(newarray[i][j]+" ");
+            }
+        }
 
     }
     else
