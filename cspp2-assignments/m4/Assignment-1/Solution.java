@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 import java.util.Arrays;
+/**. Solution is the class for largest*/
 final  class Solution {
 /**.
     Fill this main function to print maximum of given array
