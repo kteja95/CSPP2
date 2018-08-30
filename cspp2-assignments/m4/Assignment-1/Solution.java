@@ -1,20 +1,28 @@
 
 import java.util.*;
-public class Solution
+final  class Solution
 {/*
 	Fill this main function to print maximum of given array
 	*/
-	public static void main(String[] args)
+	private Solution() {
+		/**.
+		@constructor
+		*/
+	}
+	/**.
+	@param args THE ARGUMENTS
+	*/
+	public static void main(final String[] args)
 	{
-		Scanner sc=new Scanner(System.in);
-		int n= sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
 		int[] arr = new int[n];
-		for(int i =0;i<n;i++)
+		for(int i = 0; i < n; i++)
 		{
-			arr[i]=sc.nextInt();
+			arr[i] =sc.nextInt();
 		}
 		Arrays.sort(arr);
-		System.out.println(arr[arr.length-1]);
+		System.out.println(arr[arr.length - 1]);
 
 	}
 }
