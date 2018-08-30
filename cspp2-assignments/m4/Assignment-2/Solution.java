@@ -34,6 +34,8 @@ public class Solution {
             }
         }
     }
+    else
+        System.out.println("not possible");
         
         for(int i=0;i<n;i++)
         {
