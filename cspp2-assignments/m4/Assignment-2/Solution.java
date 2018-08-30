@@ -47,8 +47,7 @@ final class Solution {
         System.out.println();
         }
 
-}
-    else {
+} else {
         System.out.println("not possible");
     }
     }
