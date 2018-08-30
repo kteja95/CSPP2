@@ -48,7 +48,7 @@ public class Solution {
                 if(j==m-1)
                     System.out.print(newarray[i][j]);
                 else
-                    System.out.println(newarray[i][j]+" ");
+                    System.out.print(newarray[i][j]+" ");
             }
         }
 
