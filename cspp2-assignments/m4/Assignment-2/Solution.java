@@ -3,8 +3,7 @@ import java.util.*;
 */
 final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
-    private Solution()
-    {
+    private Solution() {
         /**.
         @constructor
         */
@@ -17,7 +16,7 @@ final class Solution {
         int n = s.nextInt();
         int m = s.nextInt();
         int[][] arr = new int[n][m];
-        for (int i = 0 ;i < n; i++) {
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 arr[i][j] = s.nextInt();
             }
@@ -26,7 +25,7 @@ final class Solution {
         int q = s.nextInt();
         int[][] ar = new int[p][q];
         for (int i = 0; i < p; i++) {
-            for (int j = 0; j<q; j++) {
+            for (int j = 0; j < q; j++) {
                 ar[i][j] = s.nextInt();
             }
         }
