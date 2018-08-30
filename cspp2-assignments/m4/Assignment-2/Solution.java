@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**. Solution the class
 */
 final class Solution {
@@ -38,10 +38,12 @@ final class Solution {
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if(j == m - 1)
+                if(j == m - 1) {
                     System.out.print(newarray[i][j]);
-                else
+                }
+                else {
                     System.out.print(newarray[i][j] + " ");
+                }
             }
         System.out.println();
         }
