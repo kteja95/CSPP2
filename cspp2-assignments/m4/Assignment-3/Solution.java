@@ -16,15 +16,16 @@ public class Solution
     }
     static String binaryToDecimal(String s){
         int j;
-        for (j=1;j<=s.length();j++)
+        int k =0;
+        for (j=0;j<s.length();j++)
         {
             if(s.charAt(j)=='1'){
-                j= (int) (j+Math.pow(2,s.length()-j));
+                k= (int) (j+Math.pow(2,s.length()-j-1));
 
             }
             
         }
-        return j+"";
+        return k+"";
     }
 
 }
