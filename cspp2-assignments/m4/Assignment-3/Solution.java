@@ -9,8 +9,8 @@ public class Solution
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
-        int n= sc.nextInt();
-        for(int i=0;i<=n;i++){
+        // int n= sc.nextInt();
+        for(int i=0;i<=5;i++){
             String s=sc.nextLine();
             String res=binaryToDecimal(s);//Write binaryToDecimal function
             System.out.println(res);
@@ -23,8 +23,7 @@ public class Solution
             if(s.charAt(j)=='1'){
                 j= (int) (j+Math.pow(2,s.length()-1-j));
 
-            }
-            
+            } 
         }
         return j+"";
     }
