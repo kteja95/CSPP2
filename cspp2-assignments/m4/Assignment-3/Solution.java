@@ -20,7 +20,7 @@ public class Solution
         for (j=0;j<s.length();j++)
         {
             if(s.charAt(j)=='1'){
-                k= (int) (j+Math.pow(2,s.length()-1-j));
+                k= (int) (k+Math.pow(2,s.length()-1-j));
 
             }
             
