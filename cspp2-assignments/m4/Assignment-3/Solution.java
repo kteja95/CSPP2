@@ -12,7 +12,6 @@ Do not modify this main function.
     }
 /**.
 @param args The arguments
-@return return The return for string to fucntion to res
 */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
