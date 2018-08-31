@@ -22,8 +22,10 @@ Do not modify this main function.
             System.out.println(res);
         }
     }
+
 /**.
 @param s the string passed from the function call
+@return return The return for string to fucntion to res
 */
     static String binaryToDecimal(final String s) {
         int j;
@@ -34,7 +36,7 @@ Do not modify this main function.
 
             }
         }
-return k+ "";
+return k + "";
     }
 
 }
