@@ -5,6 +5,11 @@ final class Solution {
 /**.
 Do not modify this main function.
 */
+    private Solution() {
+        /**.
+        @constructor
+        */
+    }
 /**.
 @param args The arguments
 @return return The return for string to fucntion to res
@@ -12,12 +17,15 @@ Do not modify this main function.
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             String s = sc.nextLine();
             String res = binaryToDecimal(s);//Write binaryToDecimal function
             System.out.println(res);
         }
     }
+/**.
+@param s the string passed from the function call
+*/
     static String binaryToDecimal(final String s) {
         int j;
         int k =  0;
@@ -27,7 +35,7 @@ Do not modify this main function.
 
             }
         }
-return k+"";
+return k+ "";
     }
 
 }
