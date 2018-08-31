@@ -1,4 +1,4 @@
-// Given an String, Write a java method that returns the decimal value for the given binary string.
+//Convert Binary to Decimal
 import java.util.Scanner;
 /**. class Solution is the class for binary to decimal*/
 final class Solution {
