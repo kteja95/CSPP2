@@ -20,10 +20,9 @@ public class Solution
         int j;
         for (j=0;j<s.length();j++)
         {
-            if(s.charAt(j)=='1'){
-                j= (int) (j+Math.pow(2,s.length()-1-j));
+            if(s.charAt(j)=='1')
+                j+= (int) (Math.pow(2,s.length()-1-j));
 
-            } 
         }
         return j+"";
     }
