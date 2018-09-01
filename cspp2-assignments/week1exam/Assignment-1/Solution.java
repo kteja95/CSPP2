@@ -31,18 +31,19 @@ public final class Solution {
                     if(i%j==0)
                     {
                         composites+=1;
-                            if(composites>0)
-                            {
-                                System.out.println(i);
-                            }
-
-
+                        if(composites>0)
+                    {
+                        System.out.println(i);
+                        break;
+                    }                        
                     }
                     break;
-                }
+                        
             }
         }
     }
+}
+
     /**
     * main method as driver program.
     * @param args is the parameter for this method
@@ -53,4 +54,5 @@ public final class Solution {
         oddComposites(n);
     }
 }
+
 
