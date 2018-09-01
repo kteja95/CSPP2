@@ -1,9 +1,9 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
- * @author : 
+ * @author : J.Krishna Teja
  */
 final class Solution {
     /**
@@ -12,7 +12,7 @@ final class Solution {
     private Solution() {
         //not used
     }
-    /**
+    /**.
      * Function to round the
      * elements of a matrix to the nearest 100.
      *
@@ -38,13 +38,13 @@ final class Solution {
                 else if (a[i][j] > u && a[i][j] < x) {
                     a[i][j] = x;
                 }
-                else if (a[i][j] > x && a[i][j] < x+u) {
+                else if (a[i][j] > x && a[i][j] < x + u) {
                     a[i][j] = x;
                 }
-                else if (a[i][j]>x+u && a[i][j]<y) {
+                else if (a[i][j] > x + u && a[i][j]<y) {
                     a[i][j]=y;
                 }
-                else if (a[i][j] > y && a[i][j] < y+u) {
+                else if (a[i][j] > y && a[i][j] < y + u) {
                     a[i][j] = y;
                 }
                 else if (a[i][j] > y+u && a[i][j] < z) {
@@ -53,13 +53,13 @@ final class Solution {
                 else if (a[i][j] > z && a[i][j] < z+u) {
                     a[i][j] = z;
                 }
-                else if (a[i][j] > z+u && a[i][j] < w) {
+                else if (a[i][j] > z + u && a[i][j] < w) {
                     a[i][j] = w;
                 }
-                else if (a[i][j] > w && a[i][j] < w+u) {
+                else if (a[i][j] > w && a[i][j] < w + u) {
                     a[i][j] = w;
                 }
-                else if (a[i][j] > w+u && a[i][j] < t) {
+                else if (a[i][j] > w + u && a[i][j] < t) {
                     a[i][j] = t;
                 }
                }
