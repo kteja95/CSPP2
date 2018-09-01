@@ -17,7 +17,7 @@ final class Solution {
      * elements of a matrix to the nearest 100.
      *
      * @param      a     Matrix of which the elements to be rounded
-     * @param      r     Number of rows
+     * @param      ro     Number of rows
      * @param      c     Number of columns
      *
      * @return     Matrix of the rounded elements
