@@ -34,7 +34,7 @@ public final class Solution {
     				}
 
     			}
-    			if(composites>0)
+    			if(composites>=2)
     				{
     					System.out.println(i);
     				}
