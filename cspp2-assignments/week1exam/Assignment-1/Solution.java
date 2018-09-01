@@ -32,12 +32,13 @@ public final class Solution {
     				{
     					composites+=1;
     				}
-    				if(composites>0)
+
+    			}
+    			if(composites>0)
     				{
     					System.out.println(i);
     				}
 
-    			}
     		}
     	}
     }
