@@ -39,10 +39,10 @@ final class Solution {
                 } else if (a[i][j] > x && a[i][j] < x + u) {
                     a[i][j] = x;
                 } else if (a[i][j] > x + u && a[i][j] < y) {
-                    a[i][j]=y;
+                    a[i][j] = y;
                 } else if (a[i][j] > y && a[i][j] < y + u) {
                     a[i][j] = y;
-                } else if (a[i][j] > y+u && a[i][j] < z) {
+                } else if (a[i][j] > y + u && a[i][j] < z) {
                     a[i][j] = z;
                 } else if (a[i][j] > z && a[i][j] < z + u) {
                     a[i][j] = z;
