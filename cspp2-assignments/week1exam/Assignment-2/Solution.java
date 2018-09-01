@@ -29,36 +29,37 @@ final class Solution {
         final int w = 400;
         final int t = 500;
         final int p = 0;
+        final int u = 50;
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < columns; j++) {
-                if(a[i][j] < 50) {
+                if(a[i][j] < u) {
                    a[i][j] = p; 
                 }
-                else if (a[i][j] > 50 && a[i][j] < 100) {
+                else if (a[i][j] > u && a[i][j] < x) {
                     a[i][j] = x;
                 }
-                else if (a[i][j] > 100 && a[i][j] < 150) {
+                else if (a[i][j] > x && a[i][j] < x+u) {
                     a[i][j] = x;
                 }
-                else if (a[i][j]>150 && a[i][j]<200) {
+                else if (a[i][j]>x+u && a[i][j]<y) {
                     a[i][j]=y;
                 }
-                else if (a[i][j] > 200 && a[i][j] < 250) {
+                else if (a[i][j] > y && a[i][j] < y+u) {
                     a[i][j] = y;
                 }
-                else if (a[i][j] > 250 && a[i][j] < 300) {
+                else if (a[i][j] > y+u && a[i][j] < z) {
                     a[i][j] = z;
                 }
-                else if (a[i][j] > 300 && a[i][j] < 350) {
+                else if (a[i][j] > z && a[i][j] < z+u) {
                     a[i][j] = z;
                 }
-                else if (a[i][j] > 350 && a[i][j] < 400) {
+                else if (a[i][j] > z+u && a[i][j] < w) {
                     a[i][j] = w;
                 }
-                else if (a[i][j] > 400 && a[i][j] < 450) {
+                else if (a[i][j] > w && a[i][j] < w+u) {
                     a[i][j] = w;
                 }
-                else if (a[i][j] > 450 && a[i][j] < 500) {
+                else if (a[i][j] > w+u && a[i][j] < t) {
                     a[i][j] = t;
                 }
                }
