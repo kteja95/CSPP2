@@ -24,19 +24,22 @@ public final class Solution {
         int j;
         for(i=3;i<n;i++)
         {
-            if(i%2==1)
+            if(i%2!=0)
             {
-                for(j=3;j<i;j++)
+                for(j=3;j<=(int) (Math.sqrt(i));j++)
                 {
                     if(i%j==0)
                     {
                         composites+=1;
-                    }
+                            if(composites>0)
+                            {
+                                System.out.println(i);
+                            }
 
+
+                    }
                 }
             }
-            if(composites>=2)
-                System.out.println(i);
         }
     }
     /**
