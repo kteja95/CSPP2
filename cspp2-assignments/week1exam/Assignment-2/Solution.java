@@ -30,33 +30,33 @@ final class Solution {
         final int t = 500;
         final int p = 0;
         final int u = 50;
-        for(int i = 0; i < rows; i++) {
-            for(int j = 0; j < columns; j++) {
-                if(a[i][j] < u) {
-                   a[i][j] = p; 
-                }else if (a[i][j] > u && a[i][j] < x) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (a[i][j] < u) {
+                   a[i][j] = p;
+                } else if (a[i][j] > u && a[i][j] < x) {
                     a[i][j] = x;
-                }else if (a[i][j] > x && a[i][j] < x + u) {
+                } else if (a[i][j] > x && a[i][j] < x + u) {
                     a[i][j] = x;
-                }else if (a[i][j] > x + u && a[i][j] < y) {
+                } else if (a[i][j] > x + u && a[i][j] < y) {
                     a[i][j]=y;
-                }else if (a[i][j] > y && a[i][j] < y + u) {
+                } else if (a[i][j] > y && a[i][j] < y + u) {
                     a[i][j] = y;
-                }else if (a[i][j] > y+u && a[i][j] < z) {
+                } else if (a[i][j] > y+u && a[i][j] < z) {
                     a[i][j] = z;
-                }else if (a[i][j] > z && a[i][j] < z + u) {
+                } else if (a[i][j] > z && a[i][j] < z + u) {
                     a[i][j] = z;
-                }else if (a[i][j] > z + u && a[i][j] < w) {
+                } else if (a[i][j] > z + u && a[i][j] < w) {
                     a[i][j] = w;
-                }else if (a[i][j] > w && a[i][j] < w + u) {
+                } else if (a[i][j] > w && a[i][j] < w + u) {
                     a[i][j] = w;
-                }else if (a[i][j] > w + u && a[i][j] < t) {
+                } else if (a[i][j] > w + u && a[i][j] < t) {
                     a[i][j] = t;
                 }
                }
         }
         return a;
-	}
+    }
     /**
      * Main function.
      *
