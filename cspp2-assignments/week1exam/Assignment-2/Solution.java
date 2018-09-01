@@ -22,7 +22,7 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] r(final int[][] a, final int ro, final int c) {
         final int x = 100;
         final int y = 200;
         final int z = 300;
@@ -30,8 +30,8 @@ final class Solution {
         final int t = 500;
         final int p = 0;
         final int u = 50;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+        for (int i = 0; i < ro; i++) {
+            for (int j = 0; j < c; j++) {
                 if (a[i][j] < u) {
                    a[i][j] = p;
                 } else if (a[i][j] > u && a[i][j] < x) {
@@ -72,7 +72,7 @@ final class Solution {
                 a[i][j] = scan.nextInt();
             }
         }
-        int[][] b = roundHundred(a, m, n);
+        int[][] b = r(a, m, n);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n - 1; j++) {
                 System.out.print(b[i][j] + " ");
