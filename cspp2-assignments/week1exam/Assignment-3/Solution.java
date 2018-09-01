@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-/**
+/**.
  * Write a java program to replace each element
  *  of the given char array that matches the given
  *  character with the given replacement.
@@ -24,14 +24,11 @@ final class Solution {
      * @return     new character array with replaced characters
      */
     static char[] replaceAll(final char[] charArray,
-        final char oldChar, final char newChar) 
-    {
+        final char oldChar, final char newChar) {
 
-        for(int i=0;i<charArray.length;i++)
-        {
-            if(charArray[i]==oldChar)
-            {
-                charArray[i]=newChar;
+        for(int i = 0; i < charArray.length; i++) {
+            if(charArray[i] == oldChar) {
+                charArray[i] = newChar;
             }
         }
         return charArray;
