@@ -6,7 +6,9 @@ class InputValidator {
     public InputValidator(final String str) {
         this.str = str;
     }
-/**.validateData is the function*/
+/**.validateData is the function.
+@return return it returns a bool
+*/
     public boolean validateData() {
         final int six = 6;
         int len = str.length();
