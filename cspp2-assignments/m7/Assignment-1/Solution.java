@@ -22,8 +22,13 @@ class InputValidator {
 /**. Solution the class
 */
 public class Solution {
+    private Solution() {
     /**.
-    @param args the arguments
+    @Solution the constructor.
+    */
+    }
+/**.
+@param args the arguments
 */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
