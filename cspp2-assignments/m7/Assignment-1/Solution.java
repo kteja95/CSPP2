@@ -5,7 +5,7 @@ class InputValidator {
     private String newstring;
 /**. InputValidator the constructor*/
 /**.
-@param str the string 
+@param str the string
 */
     public InputValidator(final String str) {
     /**.
@@ -23,7 +23,6 @@ class InputValidator {
             return true;
         }
         return false;
-        
     }
 }
 /**. Solution the class
@@ -47,3 +46,4 @@ final class Solution {
     }
 
 }
+
