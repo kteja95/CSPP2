@@ -8,13 +8,15 @@ class InputValidator {
     public boolean validateData() {
         final int six = 6;
         int len = str.length();
-        if(len >= six) {
+        if (len >= six) {
             return true;
         } else {
             return false;
         }
     }
 }
+/**. Solution the class
+*/
 public class Solution {
     /**.
     @param args the arguments
