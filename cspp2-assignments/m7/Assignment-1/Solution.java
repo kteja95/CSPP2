@@ -6,15 +6,18 @@ class InputValidator {
         this.str = str;
     }
     public boolean validateData() {
+        final int six = 6;
         int len = str.length();
-        if(len >= 6)
+        if(len >= six) {
             return true;
-        else
+        }
+        else {
             return false;
+        }
     }
 }
 public class Solution {
-    public static void main(String args[]) {
+    public static void main(final String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
