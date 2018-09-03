@@ -4,6 +4,9 @@ class InputValidator {
     /**.Write the atrributes and methods for InputValidator.*/
     String newstring;
     public InputValidator(final String str) {
+    /**.
+    @InputValidator the constructor
+*/
         this.newstring = str;
     }
 /**.validateData is the function.
