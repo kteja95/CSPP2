@@ -2,16 +2,16 @@ import java.util.Scanner;
 /**. Input validator is the class that returns true if length is 6*/
 class InputValidator {
     /**.Write the atrributes and methods for InputValidator.*/
-    String str;
+    String newstring;
     public InputValidator(final String str) {
-        this.str = str;
+        this.newstring = str;
     }
 /**.validateData is the function.
 @return return it returns a bool
 */
     public boolean validateData() {
         final int six = 6;
-        int len = str.length();
+        int len = newstring.length();
         if (len >= six) {
             return true;
         } else {
