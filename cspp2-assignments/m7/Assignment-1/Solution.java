@@ -3,6 +3,7 @@ import java.util.Scanner;
 class InputValidator {
     /**.Write the atrributes and methods for InputValidator.*/
     String newstring;
+/**. InputValidator the constructor*/
     public InputValidator(final String str) {
     /**.
     @InputValidator the constructor
@@ -17,14 +18,15 @@ class InputValidator {
         int len = newstring.length();
         if (len >= six) {
             return true;
-        } else {
-            return false;
         }
+        return false;
+        
     }
 }
 /**. Solution the class
 */
 final class Solution {
+/**. Solution the constructor*/
     private Solution() {
     /**.
     @Solution the constructor.
