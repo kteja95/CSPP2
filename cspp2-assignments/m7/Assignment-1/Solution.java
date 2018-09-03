@@ -21,7 +21,7 @@ class InputValidator {
 }
 /**. Solution the class
 */
-public class Solution {
+final class Solution {
     private Solution() {
     /**.
     @Solution the constructor.
