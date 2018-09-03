@@ -7,11 +7,11 @@ class InputValidator {
 /**.
 @param str the string
 */
-    public InputValidator(final String newstring) {
+    public InputValidator(final String str) {
     /**.
     @InputValidator the constructor
 */
-        this.newstring = newstring;
+        this.newstring = str;
     }
 /**.validateData is the function.
 @return return it returns a bool
@@ -23,6 +23,7 @@ class InputValidator {
             return true;
         }
         return false;
+        
     }
 }
 /**. Solution the class
@@ -46,6 +47,3 @@ final class Solution {
     }
 
 }
-
-
-
