@@ -2,8 +2,11 @@ import java.util.Scanner;
 /**. Input validator is the class that returns true if length is 6*/
 class InputValidator {
     /**.Write the atrributes and methods for InputValidator.*/
-    String newstring;
+    private String newstring;
 /**. InputValidator the constructor*/
+/**.
+@param str the string 
+*/
     public InputValidator(final String str) {
     /**.
     @InputValidator the constructor
