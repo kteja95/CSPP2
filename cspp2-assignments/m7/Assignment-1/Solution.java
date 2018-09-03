@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
 class InputValidator {
-    /**.Write the atrributes and methods for InputValidator*/
+    /**.Write the atrributes and methods for InputValidator.*/
     String str;
-    public InputValidator(String str) {
+    public InputValidator(final String str) {
         this.str = str;
     }
     public boolean validateData() {
