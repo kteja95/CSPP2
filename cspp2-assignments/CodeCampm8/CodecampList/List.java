@@ -218,7 +218,10 @@ final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    /**. contains the function @return returns the bool value @item the arg*/
+    /**. 
+    @param item the value to be checked
+    @return returns the bool value
+    */
     public boolean contains(final int item) {
         // Replace the code below
         int itemcount = 0;
