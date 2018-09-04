@@ -169,10 +169,9 @@ final class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
-        if (index < size)
-        {
+        if (index < size) {
             return arr[index];
         }
         return -1;
@@ -201,10 +200,8 @@ final class List {
     public String toString() {
         // Replace the code below
         String finalarr = "[";
-        if (size > 0)
-        {
-            for (int j = 0; j < size-1; j++)
-        {
+        if (size > 0) {
+            for (int j = 0; j < size-1; j++) {
             finalarr += arr[j] + ",";
         }
         return finalarr + arr[size-1] + "]";
@@ -221,10 +218,10 @@ final class List {
     public boolean contains(int item) {
         // Replace the code below
         int itemcount = 0;
-        for (int i = 0; i < size; i++)
-        {
-            if (item == arr[i])
+        for (int i = 0; i < size; i++) {
+            if (item == arr[i]) {
                 itemcount += 1;
+            }
         }
         if (itemcount > 0)
             return true;
@@ -240,8 +237,8 @@ final class List {
         // Replace the code below
         for (int i = 0; i<size; i++)
         {
-            if (item == arr[i])
-                return i;
+            if (item == arr[i]) {
+                return i;}
         }
         return -1;
     }/**.
