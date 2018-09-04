@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**. List the class*/
 final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -46,7 +46,7 @@ final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
@@ -65,7 +65,7 @@ final class List {
     final int g = 10;
     private int[] arr = new int[g];
     /**. List the constructor*/
-    public List() {
+     List() {
 /**. @list() the constructor*/
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -265,7 +265,7 @@ final class List {
     } /**.
     @param args the arguments
     */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -308,5 +308,5 @@ final class List {
                 break;
             }
         }
-	}
+    }
 }
