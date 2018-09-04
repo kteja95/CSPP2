@@ -200,10 +200,10 @@ final class List {
         // Replace the code below
         String finalarr = "[";
         if (size > 0) {
-            for (int j = 0; j < size-1; j++) {
+            for (int j = 0; j < size - 1; j++) {
             finalarr += arr[j] + ",";
         }
-        return finalarr + arr[size-1] + "]";
+        return finalarr + arr[size - 1] + "]";
         }
         return "print the list";
     } 
