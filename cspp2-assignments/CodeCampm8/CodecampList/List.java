@@ -144,13 +144,12 @@ final class List {
                     flag = 1;
                     pos = j;
                     break;
-                }else {
+                } else {
                     flag = 0;
                 }
             }
             size -= 1;
-            if (flag == 1)
-            {
+            if (flag == 1) {
                 for (int i = pos + 1; i <= size; i++) {
                     arr[i - 1] = arr[i];
                 }
