@@ -158,8 +158,9 @@ final class List {
             }
             arr[size] = 0;
         }
-        else
+        else {
             System.out.println("Invalid Position Exception");
+        }
     }
 
     /*
@@ -172,7 +173,8 @@ final class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
-     */
+     *//**. 
+    @param index the index of the elemnet ot be obtained*/
     public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < size) {
@@ -245,6 +247,8 @@ final class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**.
+    @param item the idex returning value*/
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
