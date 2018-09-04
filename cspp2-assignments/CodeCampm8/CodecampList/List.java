@@ -168,13 +168,14 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(int index) throws Exception {
         // Replace the code below to write the code for get
         if(index<size)
         {
             return arr[index];
         }
-        return -1;
+        throw new Exception("");
+        
     }
 
     /*
@@ -283,7 +284,14 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                try
+                {
+                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                }
+                catch(Exception e)
+                {
+
+                }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
