@@ -215,7 +215,7 @@ final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         int itemcount = 0;
         for (int i = 0; i < size; i++) {
