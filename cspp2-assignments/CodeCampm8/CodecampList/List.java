@@ -142,8 +142,9 @@ final class List {
                     pos = j;
                     break;
                 }
-                else
+                else {
                     flag = 0;
+                }
             }
             size -= 1;
             if (flag == 1)
