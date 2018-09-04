@@ -130,11 +130,10 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        int x=arr[index];
-        int flag=0;
-        int pos =0;
-        if(index<size)
-        {
+        if(index<size) {
+            int x=arr[index];
+            int flag=0;
+            int pos =0;
             for(int j=0;j<size;j++)
             {
                 if(arr[j]==x)
@@ -154,6 +153,8 @@ public class List {
             }
             arr[size]=0;
         }
+        else
+            System.out.println("Invalid Position Exception");
     }
 
     /*
