@@ -157,8 +157,7 @@ final class List {
                 }
             }
             arr[size] = 0;
-        }
-        else {
+        } else {
             System.out.println("Invalid Position Exception");
         }
     }
