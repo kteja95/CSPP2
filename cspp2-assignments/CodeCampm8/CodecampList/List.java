@@ -1,7 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
-
+/**. List the class*/
 final class List {
 	//Implement all the methods mentioned to build a ListADT
 
@@ -63,7 +62,7 @@ final class List {
     final int g=10;
     private int[] arr = new int[g];
     public List() {
-
+/**. @list() the constructor*/
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
