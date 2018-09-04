@@ -204,6 +204,8 @@ public class List {
             for(int j=0;j<size;j++)
         {
             finalarr+=arr[j]+",";
+            if(j==size-1)
+                break;
         }
         return finalarr+"]" ;           
         }
