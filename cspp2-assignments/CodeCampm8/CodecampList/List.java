@@ -201,13 +201,12 @@ public class List {
         String finalarr="[";
         if(size>0)
         {
-            for(int j=0;j<size;j++)
+            for(int j=0;j<size-1;j++)
         {
             finalarr+=arr[j]+",";
-            if(j==size-1)
-                break;
+            
         }
-        return finalarr+"]" ;           
+        return finalarr+arr[size-1]+"]";           
         }
         
         return "print the list";
