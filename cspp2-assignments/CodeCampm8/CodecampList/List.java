@@ -248,7 +248,9 @@ final class List {
      * or -1 if this list does not contain the element.
      */
     /**.
-    @param item the idex returning value*/
+    @param item the idex returning value
+    @return return the index
+    */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
