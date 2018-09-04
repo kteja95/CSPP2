@@ -62,7 +62,7 @@ final class List {
     @arr the array integer
     */
     private int size;
-    final int g = 10;
+    final private int g = 10;
     private int[] arr = new int[g];
     /**. List the constructor*/
      List() {
@@ -305,6 +305,8 @@ final class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
