@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class List {
+final class List {
 	//Implement all the methods mentioned to build a ListADT
 
     /*
@@ -60,7 +60,8 @@ public class List {
      * class variables with some default values.
      */
     private int size;
-    private int[] arr = new int[10];
+    final int g=10;
+    private int[] arr = new int[g];
     public List() {
 
         // what are the two variables to be initialized here?
@@ -245,9 +246,10 @@ public class List {
                 return i;
         }
         return -1;
-    }
-
-	public static void main(String[] args) {
+    }/**.
+    @param args the arguments
+    */
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
