@@ -169,10 +169,9 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        for(int j=0;j<size;j++)
+        if(index<size)
         {
-            if(j==index)
-                return arr[j];
+            return arr[index];
         }
         return -1;
     }
