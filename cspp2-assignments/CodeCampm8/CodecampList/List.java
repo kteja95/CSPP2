@@ -63,7 +63,7 @@ final class List {
     */
     private int size;
     /**. @g the size*/
-    final int g = 10;
+    private final int g = 10;
     /**. @arr the array*/
     private int[] arr = new int[g];
     /**. List the constructor*/
