@@ -206,11 +206,9 @@ final class List {
             for (int j = 0; j < size-1; j++)
         {
             finalarr += arr[j] + ",";
-            
         }
         return finalarr + arr[size-1] + "]";
         }
-        
         return "print the list";
     } 
     
