@@ -207,8 +207,7 @@ final class List {
         return finalarr + arr[size - 1] + "]";
         }
         return "print the list";
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
