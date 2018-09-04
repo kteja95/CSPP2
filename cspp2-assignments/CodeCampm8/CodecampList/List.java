@@ -199,6 +199,7 @@ final class List {
      * not all the elements of the array.
      *
      */
+    /**. toString() the function*/
     public String toString() {
         // Replace the code below
         String finalarr = "[";
@@ -216,6 +217,7 @@ final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**. contains the function*/
     public boolean contains(final int item) {
         // Replace the code below
         int itemcount = 0;
@@ -224,8 +226,9 @@ final class List {
                 itemcount += 1;
             }
         }
-        if (itemcount > 0)
+        if (itemcount > 0) {
             return true;
+        }
         return false;
     }
 
