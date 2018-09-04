@@ -130,13 +130,13 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index < size) {
+        if (index < size) {
             int x = arr[index];
             int flag = 0;
             int pos = 0;
-            for(int j = 0; j < size; j++)
+            for (int j = 0; j < size; j++)
             {
-                if(arr[j] == x)
+                if (arr[j] == x)
                 {
                     flag = 1;
                     pos = j;
@@ -146,9 +146,9 @@ public class List {
                     flag = 0;
             }
             size -= 1;
-            if(flag == 1)
+            if (flag == 1)
             {
-                for(int i = pos+1; i <= size; i++)
+                for (int i = pos+1; i <= size; i++)
                     arr[i-1] = arr[i];
             }
             arr[size] = 0;
@@ -170,7 +170,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if(index < size)
+        if (index < size)
         {
             return arr[index];
         }
@@ -200,9 +200,9 @@ public class List {
     public String toString() {
         // Replace the code below
         String finalarr = "[";
-        if(size > 0)
+        if (size > 0)
         {
-            for(int j = 0; j < size-1; j++)
+            for (int j = 0; j < size-1; j++)
         {
             finalarr += arr[j] + ",";
             
@@ -222,12 +222,12 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         int itemcount = 0;
-        for(int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++)
         {
-            if(item == arr[i])
+            if (item == arr[i])
                 itemcount += 1;
         }
-        if(itemcount > 0)
+        if (itemcount > 0)
             return true;
         return false;
     }
@@ -239,9 +239,9 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for(int i = 0; i<size; i++)
+        for (int i = 0; i<size; i++)
         {
-            if(item == arr[i])
+            if (item == arr[i])
                 return i;
         }
         return -1;
