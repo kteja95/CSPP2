@@ -64,8 +64,9 @@ final class List {
     @arr the array integer
     */
     private int size;
-    final int g=10;
+    final int g = 10;
     private int[] arr = new int[g];
+    /**. List the constructor*/
     public List() {
 /**. @list() the constructor*/
         // what are the two variables to be initialized here?
@@ -93,8 +94,9 @@ final class List {
      * to the list.
      * 
      * The method returns void (nothing)
-     */
-    public void add(int item) {
+     *//**. 
+    @param item the items to be added*/
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
         size += 1;
