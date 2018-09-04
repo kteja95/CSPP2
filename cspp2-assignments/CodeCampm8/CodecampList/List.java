@@ -170,9 +170,9 @@ final class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
-     *//**. 
+     *//**.
     @param index the index of the elemnet ot be obtained*/
     public int get(final int index) {
         // Replace the code below to write the code for get
