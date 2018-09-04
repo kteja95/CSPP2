@@ -58,6 +58,11 @@ final class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**.
+    @size the size of the array
+    @g the length of the array
+    @arr the array integer
+    */
     private int size;
     final int g=10;
     private int[] arr = new int[g];
