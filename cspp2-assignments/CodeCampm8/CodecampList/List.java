@@ -140,13 +140,11 @@ final class List {
             int flag = 0;
             int pos = 0;
             for (int j = 0; j < size; j++) {
-                if (arr[j] == x)
-                {
+                if (arr[j] == x) {
                     flag = 1;
                     pos = j;
                     break;
-                }
-                else {
+                }else {
                     flag = 0;
                 }
             }
