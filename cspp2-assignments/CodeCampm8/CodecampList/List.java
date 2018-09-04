@@ -148,8 +148,9 @@ final class List {
             size -= 1;
             if (flag == 1)
             {
-                for (int i = pos + 1; i <= size; i++)
+                for (int i = pos + 1; i <= size; i++) {
                     arr[i - 1] = arr[i];
+                }
             }
             arr[size] = 0;
         }
@@ -237,7 +238,8 @@ final class List {
         for (int i = 0; i < size; i++)
         {
             if (item == arr[i]) {
-                return i;}
+                return i;
+            }
         }
         return -1;
     }/**.
