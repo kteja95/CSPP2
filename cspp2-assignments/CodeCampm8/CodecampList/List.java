@@ -199,7 +199,9 @@ final class List {
      * not all the elements of the array.
      *
      */
-    /**. toString() the function*/
+    /**.
+    @return returns the string
+    */
     public String toString() {
         /**.@return returns the array*/
         // Replace the code below
