@@ -91,7 +91,7 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        arr[size+1]=item;
+        arr[size]=item;
         size+=1;
     }
 
@@ -104,9 +104,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        if(size>0)
-            return size;
-        return -1;
+        return size;
     }
 
     /*
