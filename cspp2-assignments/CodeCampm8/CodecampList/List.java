@@ -175,7 +175,9 @@ final class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      *//**.
-    @param index the index of the elemnet ot be obtained*/
+    @param index the index of the elemnet ot be obtained
+    @return returns the size
+    */
     public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < size) {
