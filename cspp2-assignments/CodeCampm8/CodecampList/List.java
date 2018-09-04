@@ -130,10 +130,10 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        int x=arr[index-1];
+        int x=arr[index];
         int flag=0;
         int pos =0;
-        if(index-1<size)
+        if(index<size)
         {
             for(int j=0;j<size;j++)
             {
@@ -172,7 +172,7 @@ public class List {
         for(int j=0;j<size;j++)
         {
             if(j==index)
-                return j;
+                return arr[j];
         }
         return -1;
     }
