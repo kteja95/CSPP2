@@ -139,8 +139,7 @@ final class List {
             int x = arr[index];
             int flag = 0;
             int pos = 0;
-            for (int j = 0; j < size; j++)
-            {
+            for (int j = 0; j < size; j++) {
                 if (arr[j] == x)
                 {
                     flag = 1;
@@ -240,8 +239,7 @@ final class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < size; i++)
-        {
+        for (int i = 0; i < size; i++) {
             if (item == arr[i]) {
                 return i;
             }
