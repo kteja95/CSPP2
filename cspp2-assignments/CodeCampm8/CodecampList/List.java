@@ -134,6 +134,8 @@ final class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**.
+    @param index the index */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -260,7 +262,7 @@ final class List {
             }
         }
         return -1;
-    }/**.
+    } /**.
     @param args the arguments
     */
 	public static void main(final String[] args) {
