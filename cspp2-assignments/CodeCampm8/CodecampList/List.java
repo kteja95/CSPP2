@@ -190,7 +190,7 @@ final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -222,7 +222,7 @@ final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    /**. 
+    /**.
     @param item the value to be checked
     @return returns the bool value
     */
