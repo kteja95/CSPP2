@@ -198,14 +198,14 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        int[] finalarr = new int[size];
+        String finalarr="[";
         if(size>0)
         {
             for(int j=0;j<size;j++)
         {
-            finalarr[j]=arr[j];
+            finalarr+=arr[j]+",";
         }
-        return Arrays.toString(finalarr);            
+        return finalarr+"]" ;           
         }
         
         return "print the list";
