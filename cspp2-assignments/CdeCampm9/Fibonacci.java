@@ -16,6 +16,7 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
+/**. Fibonacciis the class that is the client to the class List*/
 
 public class Fibonacci
 {
@@ -26,22 +27,23 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         List fibo = new List(n);
         int a = 0;
-        int b =1;
+        int b = 1;
         int valuesfromget=0;
         fibo.add(a);
         fibo.add(b);
-        for(int f=2;f<n;f++)
-        {
-            valuesfromget = fibo.get(f-1)+fibo.get(f-2);
+        for (int f = 2; f < n; f++) {
+            valuesfromget = fibo.get(f - 1) + fibo.get(f - 2);
             fibo.add(valuesfromget);
         }
         return fibo;
     }
-
-	public static void main(String[] args) {
+/**.
+@param args the arguments
+*/
+	public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
