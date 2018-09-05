@@ -29,7 +29,7 @@ final class Fibonacci {
     /**.
     @Fibonacci the constructor
     */
-    Fibonacci() {
+    private Fibonacci() {
     }
 /**.
 @param n the the limit for the series.
