@@ -18,7 +18,7 @@ import java.util.Scanner;
  */
 /**. Fibonacciis the class that is the client to the class List*/
 
-class Fibonacci {
+final class Fibonacci {
     /*
      * fib is a static method takes a argument n
      * n is the count of the fibonacci numbers to be generated.
