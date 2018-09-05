@@ -26,6 +26,9 @@ final class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    Fibonacci() {
+        
+    }
 /**.
 @param n the the limit for the series.
 @return returns the fibo object
