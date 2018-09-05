@@ -95,7 +95,7 @@ public class List {
      */
 
     // todo - add an overloaded constructor here
-    public List(int n) {
+    public List(int total) {
     }
 
     
