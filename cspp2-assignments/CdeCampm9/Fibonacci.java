@@ -27,11 +27,13 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+/**. 
+@param n the the limit for the series*/
     public static List fib(final int n) {
         List fibo = new List(n);
         int a = 0;
         int b = 1;
-        int valuesfromget=0;
+        int valuesfromget = 0;
         fibo.add(a);
         fibo.add(b);
         for (int f = 2; f < n; f++) {
@@ -43,7 +45,7 @@ public class Fibonacci
 /**.
 @param args the arguments
 */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
