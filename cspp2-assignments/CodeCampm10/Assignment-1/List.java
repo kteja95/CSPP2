@@ -315,9 +315,9 @@ public class List {
     }
     
     /* Returns the count of occurances of a given item in the list*/
-    public int count(int item) {
+    public int count(final int item) {
         int itemcount = 0;
-         // write the logic 
+         // write the logic
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 itemcount++;
@@ -345,7 +345,7 @@ public class List {
                case "add":
                 if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if(t.length == 1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
                     if (t.length > 1) {
@@ -360,9 +360,10 @@ public class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
-                for (int i = 0; i < temp.length; i++)
+                int[] temp = new int[t1.length];
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
