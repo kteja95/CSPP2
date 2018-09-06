@@ -285,9 +285,9 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-/**.
-@param items[] to be inserted after a position
-*/
+
+    /**.
+    @param items[] the array for insertion*/
     public void addAll(final int items[]) {
         // write the logic
         int temp,i,j = 0;
