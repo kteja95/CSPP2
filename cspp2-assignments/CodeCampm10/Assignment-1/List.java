@@ -294,21 +294,21 @@ public class List {
 */
     public void addAll(final int items[]) {
         // write the logic
-        int temp,i,j=0;
-        for (i=size;j<items.length;i++) {
-            list[i]=items[j];
+        int temp,i,j = 0;
+        for (i = size; j < items.length; i++) {
+            list[i] = items[j];
             j++;
-            size+=1;
+            size += 1;
         }
 
             }
 
-     /* 
-        Inserts the specified element at the specified index 
+     /*
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
          // write the logic
         if (index < 0) {
             System.out.println("Negative Index Exception");
