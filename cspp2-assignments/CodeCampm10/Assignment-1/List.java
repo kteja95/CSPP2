@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
-import java.util.*;;
-
+import java.util.Scanner;
+import java.util.Arrays;
+/**. List the class*/
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -93,7 +94,7 @@ public class List {
      * constructor.
      * 
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -109,7 +110,10 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item){
+/**.
+@param item the item to be added
+*/
+    public void add(final int item){
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;  
     }
@@ -183,12 +187,14 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
-    public void remove(int index) {
+/**.
+@param index the location of element to be removed
+*/
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -208,7 +214,10 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+/**.
+@param index the index position to be obtained
+*/
+    public int get(final int index) {
         if(index < 0 || index >= size) {
             return -1;
         } else {
@@ -254,7 +263,10 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**.
+    @param item the item to check the boolean of item presence
+    */
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -263,19 +275,27 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+    /**.
+    @param item the item whose index is to be obtained
+    */
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+
                 return i;
+            }
         }
         return -1;
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[]) {
+/**.
+@param the items[] to beinserted after a position
+*/
+    public void addAll(final int items[]) {
         // write the logic
         int temp,i,j=0;
-        for(i=size;j<items.length;i++) {
+        for (i=size;j<items.length;i++) {
             list[i]=items[j];
             j++;
             size+=1;
@@ -294,7 +314,7 @@ public class List {
             System.out.println("Negative Index Exception");
         } else {
             int j = index;
-            for(int i = size; i > j; i--) {
+            for (int i = size; i > j; i--) {
                 list[i] = list[i - 1];
          }
          list[j] = item;
@@ -305,16 +325,17 @@ public class List {
     public int count(int item) {
         int itemcount = 0;
          // write the logic 
-        for(int i = 0; i < size; i++) {
-            if(list[i] == item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 itemcount++;
             }
         }
         return itemcount;
     }
-
-
-    public static void main(String[] args) {
+/**.
+@param args the arguments
+*/
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
