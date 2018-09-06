@@ -13,6 +13,7 @@ import java.util.Scanner;
      * Here E is a type parameter, and it will be replaced with 
         actual type when the object got created. 
      */
+/**. generic list of type class*/
 public class List<E> {
     private E[] list;
     private int size;
@@ -38,8 +39,9 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        if(list.length==size)
+        if (list.length == size) {
             resize();
+        }
         list[(size++)] = item;
     }
     private void resize() {
@@ -106,7 +108,7 @@ public class List<E> {
      */
     public E get(int index) {
          //Write logic for get method
-        if(index >= 0 || index < size) {
+        if (index >= 0 || index < size) {
             
             return list[index];
     }
@@ -141,7 +143,7 @@ public class List<E> {
         for(i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
-        return str+list[size-1]+"]";
+        return str + list[size - 1] + "]";
     }
     /*
      * Contains return true if the list has
@@ -150,9 +152,10 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
-        if(indexOf(item)>=0)
+        //Write logic for contains method
+        if (indexOf(item) >= 0) {
             return true;
+        }
         return false;
     }
     /*
