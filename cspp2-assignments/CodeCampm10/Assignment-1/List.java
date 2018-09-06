@@ -109,9 +109,9 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(int item){
         //Inserts the specified element at the end of the zelist.
-        list[size++] = item;   
+        list[size++] = item;  
     }
 
     /*
@@ -146,6 +146,7 @@ public class List {
      */
 
     // todo create resize method
+
 
     /*
      * The size method returns the value of the size.
@@ -233,7 +234,7 @@ public class List {
      */
     public String toString() {
         if(size == 0)
-            return "";
+            return "[]";
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -286,11 +287,15 @@ public class List {
      */
     public void add(final int index,final int item) {
          // write the logic
-         int j=index;
-         for(int i=size-1;i>=j-1;i--) {
-            list[i+1] = list[i];
+        if(index<0) {
+            System.out.println("Negative Index Exception");
+        } else {
+            int j=index;
+            for(int i=size;i>j;i--) {
+                list[i] = list[i-1];
          }
-         list[j-1] = item; 
+         list[j] = item;
+        } size+=1;
     }
     
     /* Returns the count of occurances of a given item in the list*/
