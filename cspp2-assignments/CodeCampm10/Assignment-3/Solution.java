@@ -3,19 +3,20 @@ import java.util.Scanner;
 //A Class is implemented for Student details
 /**. Student class foe student details*/
 class Student {
-    private String name;
+    /**.@name the string name*/
+    private String names;
     Student(final String name) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.names = name;
     }
-
+/**. @getName the function*/
     public String getName() {
         //Getter method which returns the value of instance variable
-        return this.name;
+        return this.names;
     }
-
+/**#Override*/
     @Override
-    public boolean equals(Object other) { 
+    public boolean equals(final Object other) { 
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -24,12 +25,12 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+/**.@toString() the print function*/
     public String toString() {
-        return this.name;
+        return this.names;
     }
 }
-
+/**. Solution the class for the main*/
 public class Solution {
     
 
