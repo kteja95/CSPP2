@@ -1,5 +1,5 @@
 import java.io.BufferedInputStream;
-import java.util.Scanner;
+import java.util.*;;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -113,6 +113,10 @@ public class List {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;  
     }
+    // public int[] resize() {
+    //     int[] newlist = Arrays.copyOf(list,2*size);
+    //     return newlist;
+    //}
 
     /*
      *
@@ -268,8 +272,7 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[])
-    {
+    public void addAll(int items[]) {
         // write the logic
         int temp,i,j=0;
         for(i=size;j<items.length;i++) {
@@ -287,24 +290,23 @@ public class List {
      */
     public void add(final int index,final int item) {
          // write the logic
-        if(index<0) {
+        if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
-            int j=index;
-            for(int i=size;i>j;i--) {
-                list[i] = list[i-1];
+            int j = index;
+            for(int i = size; i > j; i--) {
+                list[i] = list[i - 1];
          }
          list[j] = item;
-        } size+=1;
+        } size += 1;
     }
     
     /* Returns the count of occurances of a given item in the list*/
-    public int count(int item)
-    {
-        int itemcount=0;
+    public int count(int item) {
+        int itemcount = 0;
          // write the logic 
-        for(int i=0;i<size;i++) {
-            if(list[i]==item) {
+        for(int i = 0; i < size; i++) {
+            if(list[i] == item) {
                 itemcount++;
             }
         }
@@ -327,13 +329,13 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if((tokens.length) == 2){
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if(t.length == 1){
                     l.add(Integer.parseInt(tokens[1]));
                 }
                 else{
-                    if(t.length>1)
+                    if(t.length > 1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
                     }
                 }
@@ -342,11 +344,11 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if(tokens.length == 2){
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
+                int temp[] = new int[t1.length];
+                for(int i = 0; i < temp.length; i++)
+                    temp[i] = Integer.parseInt(t1[i]);
                 l.addAll(temp);
                 }
                 break;
