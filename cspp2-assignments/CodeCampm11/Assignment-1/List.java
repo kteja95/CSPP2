@@ -226,11 +226,11 @@ public class List {
     {
         // write the logic
         int j=0;
-        for(int i=size-1;i<newArray.length;i++)
+        for(int i=size;i<newArray.length;i++)
         {
             list[i]=newArray[j];
             j++;
-            size++;
+            size+=1;
         }
     }
     /*
@@ -268,14 +268,14 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list ) 
-    {
-    // Replace the code below
-        List ll = new List();
-        if(ll.equals(list))
-            return true;
-        return false;
-    }
+    // public boolean equals(List list ) 
+    // {
+    // // Replace the code below
+    //     List ll = new List();
+    //     if(ll.equals(list))
+    //         return true;
+    //     return false;
+    // }
     /*
     * Removes all the elements from list
     * Think about this case and make the method
@@ -366,16 +366,16 @@ public class List {
                 //         System.out.println(object);
                 //     break;
                 //}
-                case "equals":
-                    if (tokens.length == 2) {
-                        String[] lt = tokens[1].split(",");
-                        List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
-                            l2.add(Integer.parseInt(lt[k]));
-                        }
-                        System.out.println(l.equals(l2));
-                    }
-                break;
+                // case "equals":
+                //     if (tokens.length == 2) {
+                //         String[] lt = tokens[1].split(",");
+                //         List l2 = new List();
+                //         for (int k = 0; k < lt.length; k++ ) {
+                //             l2.add(Integer.parseInt(lt[k]));
+                //         }
+                //         System.out.println(l.equals(l2));
+                //     }
+                // break;
                 // case "clear":
                 //     l.clear();
                 // break;
