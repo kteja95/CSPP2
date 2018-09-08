@@ -226,7 +226,7 @@ public class List {
     {
         // write the logic
         int j=0;
-        for(int i=size;i<newArray.length;i++)
+        for(int i=size;j<newArray.length;i++)
         {
             list[i]=newArray[j];
             j++;
