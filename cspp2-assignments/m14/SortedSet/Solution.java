@@ -28,8 +28,8 @@ class Sortedset extends Set {
         return Arrays.copyOf(result, k);
     }
     /**.
-    @param toElement should be the ending limit
-    @return the returns the copy of array.
+    *@param toElement should be the ending limit
+    *@return the returns the copy of array.
     */
     public int[] headSet(final int toElement) {
         int[] result = new int[size];
@@ -53,15 +53,16 @@ class Sortedset extends Set {
         return set[size - 1];
     }
 /**.
-@param item[] the array to be added
+* @param item[] the array to be added
 */
     public void addAll(final int[] item) {
             for (int i:item) {
                 this.add(i);
         }
     }
-/**.
-@param arr[] the array passed as set array*/
+/**
+*@param arr[] the array passed as set array.
+*/
     public void sort(final int[] arr) {
         int temp;
         for (int i = 0; i < size; i++) {
