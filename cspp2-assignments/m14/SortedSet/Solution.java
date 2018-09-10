@@ -3,7 +3,7 @@ import java.io.BufferedInputStream;
 import java.util.Arrays;
 /**. Sortedset is the class */
 class Sortedset extends Set {
-	/**.
+    /**.
 @param fromElement the starting element.
 @param toElement the ending element.
 @return returns the copy of array.
@@ -81,11 +81,14 @@ class Sortedset extends Set {
         }
         sort(set);
     }
-}    
+} 
 class Solution {
-	/**.
-	@param s the string.
-	*/
+    /**.
+    @param s the string.
+    */
+/**.
+@return returns the int array
+*/
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -98,7 +101,7 @@ class Solution {
                .mapToInt(Integer::parseInt)
                .toArray();
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Sortedset s = new Sortedset();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
          while (stdin.hasNext()) {
