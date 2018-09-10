@@ -60,6 +60,8 @@ class Sortedset extends Set {
                 this.add(i);
         }
     }
+/**.
+@param arr[] the array passed as set array*/
     public void sort(final int[] arr) {
         int temp;
         for (int i = 0; i < size; i++) {
@@ -85,6 +87,9 @@ class Sortedset extends Set {
 }
 /**. Solution the class*/
 class Solution {
+    Solution() {
+
+    }
 /**.
 @return returns the int array
 @param s the string
