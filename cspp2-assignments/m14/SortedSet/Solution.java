@@ -91,7 +91,7 @@ final class Solution {
     /**
      * COnstructor.
      */
-    Solution() {
+    private Solution() {
         //Constructor.
     }
 /**.
