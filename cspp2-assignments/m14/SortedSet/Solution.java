@@ -83,6 +83,9 @@ class Sortedset extends Set {
     }
 }    
 class Solution {
+	/**.
+	@param s the string.
+	*/
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
