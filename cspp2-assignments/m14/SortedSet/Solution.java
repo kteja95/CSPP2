@@ -6,6 +6,7 @@ class Sortedset extends Set {
 /**.
 @param fromElement the starting element.
 @param toElement the ending element.
+@return returns the copy of array.
 */
     public int[] subSet(int fromElement, int toElement) {
         if (fromElement > toElement) {
