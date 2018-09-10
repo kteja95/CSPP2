@@ -48,13 +48,10 @@ public class Set {
     private void resize() {
         set = java.util.Arrays.copyOf(set, size * 2);
     }
-
     /**
-     * add all elements of the array to this Set.
-     * @param arr as an arr to be added in this set,
-     *            if the element is not present in this set.
+     *@param arr
      */
-    public void add(int[] arr) {
+    public void add(final int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             add(arr[i]);
         }
@@ -66,7 +63,7 @@ public class Set {
      * @return the result that contains the common
      * elements of the two sets.
      */
-    public Set intersection(Set other) {
+    public Set intersection(final Set other) {
         Set result = new Set();
         for (int i = 0; i < this.size; i++) {
             if (other.contains(this.get(i))) {
