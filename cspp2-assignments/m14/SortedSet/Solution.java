@@ -87,7 +87,7 @@ class Sortedset extends Set {
     }
 }
 /**. Solution the class*/
-public final class Solution {
+final class Solution {
     /**
      * COnstructor.
      */
