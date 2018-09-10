@@ -84,7 +84,8 @@ class Sortedset extends Set {
         }
         sort(set);
     }
-} 
+}
+/**. Solution the class*/
 class Solution {
 /**.
 @return returns the int array
