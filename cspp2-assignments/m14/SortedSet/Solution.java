@@ -29,6 +29,7 @@ class Sortedset extends Set {
     }
     /**.
     @param toElement should be the ending limit
+    @return the returns the copy of array.
     */
     public int[] headSet(final int toElement) {
         int[] result = new int[size];
@@ -76,7 +77,7 @@ class Sortedset extends Set {
     }
     /**
      * add method.
-     * @param      item  The item
+     * @param item  The item
      */
     public void add(final int item) {
         if (!contains(item)) {
