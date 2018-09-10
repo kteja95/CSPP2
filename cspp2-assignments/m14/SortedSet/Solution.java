@@ -3,12 +3,12 @@ import java.io.BufferedInputStream;
 import java.util.Arrays;
 /**. Sortedset is the class */
 class Sortedset extends Set {
-/**.
+	/**.
 @param fromElement the starting element.
 @param toElement the ending element.
 @return returns the copy of array.
 */
-    public int[] subSet(int fromElement, int toElement) {
+    public int[] subSet(final int fromElement, final int toElement) {
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
@@ -30,7 +30,7 @@ class Sortedset extends Set {
     /**.
     @param toElement should be the ending limit
     */
-    public int[] headSet(int toElement) {
+    public int[] headSet(final int toElement) {
         int[] result = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -51,7 +51,7 @@ class Sortedset extends Set {
     /**.
     @param item[] the array to be added 
     */
-    public void addAll(int[] item) {
+    public void addAll(final int[] item) {
             for (int i:item) {
                 this.add(i);
         }
