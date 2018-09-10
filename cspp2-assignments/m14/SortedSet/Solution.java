@@ -60,9 +60,6 @@ class Sortedset extends Set {
                 this.add(i);
         }
     }
-    /**.
-    @param arr[] the copy of set array declared in set.java file
-    */
     public void sort(final int[] arr) {
         int temp;
         for (int i = 0; i < size; i++) {
