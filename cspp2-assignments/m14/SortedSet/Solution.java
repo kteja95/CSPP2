@@ -41,6 +41,9 @@ class Sortedset extends Set {
         }
         return Arrays.copyOf(result, count);
     }
+    /**.
+    @return the return for last element
+    */
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -48,9 +51,9 @@ class Sortedset extends Set {
         }
         return set[size - 1];
     }
-    /**.
-    @param item[] the array to be added 
-    */
+/**.
+@param item[] the array to be added
+*/
     public void addAll(final int[] item) {
             for (int i:item) {
                 this.add(i);
@@ -83,11 +86,9 @@ class Sortedset extends Set {
     }
 } 
 class Solution {
-    /**.
-    @param s the string.
-    */
 /**.
 @return returns the int array
+@param s the string
 */
     public static int[] intArray(final String s) {
         String input = s;
@@ -101,6 +102,9 @@ class Solution {
                .mapToInt(Integer::parseInt)
                .toArray();
     }
+    /**.
+    @param args the argument =s
+    */
     public static void main(final String[] args) {
         Sortedset s = new Sortedset();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
