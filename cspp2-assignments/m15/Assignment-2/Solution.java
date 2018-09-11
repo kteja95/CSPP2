@@ -22,7 +22,9 @@ SetEmptyException the user defined exception class.
 */
 class SetEmptyException extends Exception {
 /**.
-@SetEmptyException the constructor*/
+@SetEmptyException the constructor.
+@param s the string
+*/
     SetEmptyException(final String s) {
         super(s);
     }
@@ -34,7 +36,6 @@ class Sortedset extends Set {
     /**.
 @param fromElement the starting element.
 @param toElement the ending element.
-@return returns the copy of array.
 */
 /**.
 @throws throws the exception
@@ -42,6 +43,7 @@ class Sortedset extends Set {
 /**.
 @param fromElement the start.
 @param toElement the end.
+@return returns the copy of array.
 */
     public int[] subSet(final int fromElement, final int toElement) throws InvalidSubsetSelectionException {
         if (fromElement > toElement) {
