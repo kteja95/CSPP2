@@ -35,11 +35,11 @@ class List {
         int pos=0;
         int j;
         int check=0;
-        int x=list[index];
-        System.out.println("index is"+index);
-        if(index < 0 || index >= size) {
+        
+        if(index < 0 && index >= size) {
             throw new Exception("Invalid Position Exception");
         }
+        int x=list[index];
         for(j=0;j<size;j++) {
             if(list[j]==x){
                 check=1;
@@ -211,11 +211,11 @@ class Solution {
                     if(tokens.length==2) {
                         try {
                             l.remove(Integer.parseInt(tokens[1]));
-                    }
+                        }
                         catch(Exception e) {
                             System.out.println(e.getMessage());
+                        }
                     }
-                }
                 break;
                 case "get":
                     if(tokens.length==2) {
