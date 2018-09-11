@@ -182,8 +182,7 @@ final class Solution {
                         System.out.println(Arrays.toString(object).replace("[",
                             "{").replace("]", "}"));
                     }
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
@@ -192,8 +191,7 @@ final class Solution {
                     int[] obj = s.headSet(Integer.parseInt(tokens[1]));
                     System.out.println(Arrays.toString(obj).replace("[",
                                 "{").replace("]", "}"));
-                    }
-                catch (Exception e) {
+                    } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
