@@ -45,7 +45,8 @@ class Sortedset extends Set {
 @param toElement the end.
 @return returns the copy of array.
 */
-    public int[] subSet(final int fromElement, final int toElement) throws InvalidSubsetSelectionException {
+    public int[] subSet(
+        final int fromElement, final int toElement) throws InvalidSubsetSelectionException {
         if (fromElement > toElement) {
             throw new InvalidSubsetSelectionException(
                 "Invalid Arguments to Subset Exception");
