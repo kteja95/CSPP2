@@ -18,7 +18,7 @@ class InvalidSubsetSelectionException extends Exception {
 SetEmptyException the user defined exception class.
 */
 /**.
-@SetEmptyException {the constructor}
+@SetEmptyException the class
 */
 class SetEmptyException extends Exception {
 /**.
@@ -44,6 +44,7 @@ class Sortedset extends Set {
 @param fromElement the start.
 @param toElement the end.
 @return returns the copy of array.
+@throws thorws the exception.
 */
     public int[] subSet(
         final int fromElement, final int toElement) throws InvalidSubsetSelectionException {
