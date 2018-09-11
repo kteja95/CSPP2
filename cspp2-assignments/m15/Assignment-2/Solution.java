@@ -7,12 +7,18 @@ InvalidSubSetSelectionException the user defined exception class.
 class InvalidSubsetSelectionException extends Exception {
 /**.
 @InvalidSubsetSelectionException the constructor*/
+/**.
+@param s the string
+*/
     InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
 /**.
 SetEmptyException the user defined exception class.
+*/
+/**.
+@param s the string 
 */
 class SetEmptyException extends Exception {
 /**.
