@@ -202,8 +202,7 @@ final class Solution {
                     }
                     int temp = s.last();
                     System.out.println(temp);
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
