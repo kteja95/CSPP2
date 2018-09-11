@@ -36,7 +36,7 @@ class List {
         int j;
         int check=0;
         
-        if(index < 0 && index >= size) {
+        if(index < 0 || index >= size) {
             throw new Exception("Invalid Position Exception");
         }
         int x=list[index];
