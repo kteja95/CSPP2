@@ -36,6 +36,7 @@ class List {
         int j;
         int check=0;
         int x=list[index];
+        System.out.println("index is"+index);
         if(index < 0 || index >= size) {
             throw new Exception("Invalid Position Exception");
         }
