@@ -33,6 +33,10 @@ class Sortedset extends Set {
 /**.
 @throws throws the exception
 */
+/**.
+@param fromElement the start.
+@param toElement the end.
+*/
     public int[] subSet(final int fromElement, final int toElement) throws InvalidSubsetSelectionException {
         if (fromElement > toElement) {
             throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
@@ -56,6 +60,9 @@ class Sortedset extends Set {
     *@param toElement should be the ending limit
     *@return the returns the copy of array.
     */
+/**.
+@param toElement the ending limit element.
+*/
     public int[] headSet(final int toElement) throws SetEmptyException {
         int[] result = new int[size];
         int count = 0;
