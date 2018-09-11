@@ -6,7 +6,7 @@ InvalidSubSetSelectionException the user defined exception class.
 */
 class InvalidSubsetSelectionException extends Exception {
 /**.
-@InvalidSubsetSelectionException the constructor*/ 
+@InvalidSubsetSelectionException the constructor*/
     InvalidSubsetSelectionException(final String s) {
         super(s);
     }
@@ -30,7 +30,10 @@ class Sortedset extends Set {
 @param toElement the ending element.
 @return returns the copy of array.
 */
-    public int[] subSet(final int fromElement, final int toElement) throws InvalidSubsetSelectionException{
+/**.
+@throws throws the exception
+*/
+    public int[] subSet(final int fromElement, final int toElement) throws InvalidSubsetSelectionException {
         if (fromElement > toElement) {
             throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
 
@@ -62,13 +65,16 @@ class Sortedset extends Set {
                 count++;
             }
         }
-        if(count==0) {
+        if (count == 0) {
             throw new SetEmptyException("Set Empty Exception");
         }
         return Arrays.copyOf(result, count);
     }
     /**.
     @return the return for last element
+    */
+    /**.
+    @throws throws the exception
     */
     public int last() throws SetEmptyException {
         if (size == 0) {
