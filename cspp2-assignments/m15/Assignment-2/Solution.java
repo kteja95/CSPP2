@@ -18,6 +18,7 @@ class InvalidSubsetSelectionException extends Exception {
 SetEmptyException the user defined exception class.
 */
 /**.
+@SetEmptyException {the constructor}
 */
 class SetEmptyException extends Exception {
 /**.
