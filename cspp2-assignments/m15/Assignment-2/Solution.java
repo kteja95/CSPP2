@@ -1,13 +1,23 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**.
+InvalidSubSetSelectionException the user defined exception class.
+*/
 class InvalidSubsetSelectionException extends Exception {
-    InvalidSubsetSelectionException(String s) {
+/**.
+@InvalidSubsetSelectionException the constructor*/ 
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
+/**.
+SetEmptyException the user defined exception class.
+*/
 class SetEmptyException extends Exception {
-    SetEmptyException(String s) {
+/**.
+@SetEmptyException the constructor*/
+    SetEmptyException(final String s) {
         super(s);
     }
 }
