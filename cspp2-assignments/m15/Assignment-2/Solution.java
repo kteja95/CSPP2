@@ -75,6 +75,7 @@ class Sortedset extends Set {
 /**.
 @param toElement the ending limit element.
 @return returns the array with headset.
+@throws SetEmptyException {exception}
 */
     public int[] headSet(final int toElement) throws SetEmptyException {
         int[] result = new int[size];
@@ -94,7 +95,7 @@ class Sortedset extends Set {
     @return the return for last element
     */
     /**.
-    @throws throws the exception
+    @throws SetEmptyException {the exception}
     @return returns the the last element.
     */
     public int last() throws SetEmptyException {
