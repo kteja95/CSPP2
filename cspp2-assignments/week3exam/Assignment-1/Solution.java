@@ -102,7 +102,8 @@ public final class Solution {
 
         if (flag > z) {
             System.out.println(
-                "Error! Correct answer choice number is out of range for question text 1");
+                "Error! Correct answer choice number is out of range for question text 1"
+                );
             return;
         }
         System.out.println(questionCount + " are added to the quiz");
