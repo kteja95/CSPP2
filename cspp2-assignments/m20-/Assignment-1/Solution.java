@@ -304,15 +304,15 @@ public final class Solution {
                                 }
                             } else {
                                 throw new Exception(
-                                    "Invalid max marks for " + input[0]);
+                                    "Invalid max marks for " + input[2]);
                             }
                         } else {
                             throw new Exception(
                                 "Error! Correct answer choice number"
-                                + " is out of range for " + input[0]);
+                                + " is out of range for " + input[1]);
                         }
                     } else {
-                        throw new Exception(input[0]
+                        throw new Exception(input[1]
                             + " does not have enough answer choices");
                     }
                 } else {
