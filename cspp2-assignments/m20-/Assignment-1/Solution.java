@@ -287,9 +287,9 @@ public final class Solution {
         if (q > 0) {
             for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
-                String[] input = line.split("");
+                String[] input = line.split(":");
                 if (input.length == five && input[1].length() > 1) {
-                    String[] choice = input[1].split(",");
+                    String[] choice = input[0].split(",");
                     if (choice.length > 1) {
                         if (Integer.parseInt(input[2]) <= choice.length) {
                             if (Integer.parseInt(input[three]) > 0) {
@@ -300,7 +300,7 @@ public final class Solution {
                                         Integer.parseInt(input[four])));
                                 } else {
                                     throw new Exception("Invalid penalty for "
-                                        + input[0]);
+                                        + input[1]);
                                 }
                             } else {
                                 throw new Exception(
