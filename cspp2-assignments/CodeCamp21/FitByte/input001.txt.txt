@@ -1,0 +1,7 @@
+7
+addWater 1
+addPhysical running,17:30,21:30,Aug 21 2018
+addFood gulabjamun,5,Aug 22 2018
+addFat 85
+addSleep 17:30,21:30
+display
