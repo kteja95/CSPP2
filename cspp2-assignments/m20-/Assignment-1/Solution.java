@@ -288,7 +288,7 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
                 String[] input = line.split(":");
-                if (input.length == five && input[1].length() > 1) {
+                if (input.length == five && input[0].length() > 1) {
                     String[] choice = input[0].split(",");
                     if (choice.length > 1) {
                         if (Integer.parseInt(input[2]) <= choice.length) {
@@ -300,19 +300,19 @@ public final class Solution {
                                         Integer.parseInt(input[four])));
                                 } else {
                                     throw new Exception("Invalid penalty for "
-                                        + input[1]);
+                                        + input[0]);
                                 }
                             } else {
                                 throw new Exception(
-                                    "Invalid max marks for " + input[2]);
+                                    "Invalid max marks for " + input[0]);
                             }
                         } else {
                             throw new Exception(
                                 "Error! Correct answer choice number"
-                                + " is out of range for " + input[1]);
+                                + " is out of range for " + input[0]);
                         }
                     } else {
-                        throw new Exception(input[1]
+                        throw new Exception(input[0]
                             + " does not have enough answer choices");
                     }
                 } else {
