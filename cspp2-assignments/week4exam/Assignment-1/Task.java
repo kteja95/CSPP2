@@ -16,25 +16,11 @@ class Task {
 	boolean important;
 	boolean urgent;
 	String status;
-
-
-	/**Check for errors in the values set for the properties of the Task object. The error validation
-should be performed in the constructor. In case of error, constructor should throw an Exception
-with an error message. There are 3 validations to be performed.
-1. Task title should not be empty
-2. Time required to complete the task should be non negative value
-3. Task status should be either todo or done and can’t have any other value.
-The error messages for the above validations are:
-1. Title not provided
-2. Invalid timeToComplete <time value>
-3. Invalid status <status value>
-3 test case files input003, input004, input005 must pass for the 2 marks to be awarded. Main
-method is already provided and handles the input and output.*/
 	
 	Task(String t, String to, int time, boolean imp,
 	     boolean u, String s) throws Exception {
-		if (t == null || t.equals("")) throw new Exception("Title not provided ");
-		if (!s.equals("todo") && !s.equals("done")) throw new Exception("Invalid status " + status);
+		if (t == null || t.equals("")) throw new Exception("Title not provided"); // WRTING EXCEPTIONS FOR THE TITLE.
+		if (!s.equals("todo") && !s.equals("done")) throw new Exception("Invalid status " + status);//WRITING THE EXCEPTION FOR TASK.
 		if (time < 0) throw new Exception("Invalid timeToComplete " + time);
 		this.title = t;
 		this.assignedTo = to;
