@@ -79,8 +79,8 @@ class Data {
                     if (i == 0 || j == 0) {
                         array[i][j] = 1;
                     } else {
-                        array[i][j] = array[i - 1][j - 1] + 1;
-                    } if (max < array[i][j]) {
+                        array[i][j] = array[i - 1][j - 1] + 1;} 
+                    if (max < array[i][j]) {
                         max = array[i][j];
                     }
                 }
