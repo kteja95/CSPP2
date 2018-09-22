@@ -34,7 +34,7 @@ class Task {
 		String b = "Not Urgent";
 		if(important) a = "Important";
 		if(urgent) b = "Urgent";
-		String display = title + ", " + assignedTo+", "+ timeToComplete+", "+ a+", "+ b+", "+ status;
+		String display = title + ", " + assignedTo+", "+ timeToComplete+", "+ a+", "+ b+", "+status;
 		return display;
 	}
 }
