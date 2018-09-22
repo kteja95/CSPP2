@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.lang.*;
 import java.io.File;
-import java.io.*;
+import java.io.FileNotFoundException;
 /**this class is to maintain.
 *complete details of two files.
 */
