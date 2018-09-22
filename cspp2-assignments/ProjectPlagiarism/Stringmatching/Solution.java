@@ -139,8 +139,8 @@ public final class Solution {
         for (int i = 0; i < length; i++) {
             System.out.print(filearray[i].getName() + "\t");
             for (int j = 0; j < length; j++) {
-                    System.out.print(String.format
-                        ("%.1f", fileMatrix[i][j]) + "\t\t");
+                    System.out.print(String.format(
+                        "%.1f", fileMatrix[i][j]) + "\t\t");
             }
             System.out.println();
         }
