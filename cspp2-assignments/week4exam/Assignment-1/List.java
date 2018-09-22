@@ -87,10 +87,6 @@ provided and handles the input and output.*/
         return getT;
     }
 
-   /** Add a public method totalTime4Completion that returns an int. The goal of the method is to add
-up all the time to complete properties of the tasks that are todo and return the total.
-Test case files input011, input012, input013 must pass for the 1 mark to be awarded. Main
-method is already provided and handles the input and output.*/
     public int totalTime4Completion() {
         int total = 0;
         for (int i = 0; i < size; i++) {
@@ -105,7 +101,7 @@ method is already provided and handles the input and output.*/
             String b = "Not Urgent";
             if (t[i].important) a = "Important";
             if (t[i].urgent) b = "Urgent";
-            display += t[i].title + ", " + t[i].assignedTo + ", " + t[i].timeToComplete + ", " + a + ", "+
+            display += t[i].title + ", " + t[i].assignedTo + ", " + t[i].timeToComplete + ", " + a + ", "+status
             b + ", " + t[i].status + "\n";
 
         }
