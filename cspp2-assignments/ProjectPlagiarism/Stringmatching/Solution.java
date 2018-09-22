@@ -80,7 +80,8 @@ class Data {
                         array[i][j] = 1;
                     } else {
                         array[i][j] = array[i - 1][j - 1] + 1;
-                    } if (max < array[i][j]) {
+                    } 
+                    if (max < array[i][j]) {
                         max = array[i][j];
                     }
                 }
