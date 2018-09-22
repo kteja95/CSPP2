@@ -4,20 +4,6 @@ import java.util.Arrays;
 /**
   * write your code below this comment
   */
-/**
- * Class for todoist.
- */
-
-/**Create a class called Todoist. It should have an array of the type Task to store the Task objects.
-The constructor of the Todoist should initialize the array. Add a public method add that takes a
-Task object as a parameter. The add method should add the given task object to the array. If
-the array is full then resize the array.
-Add a toString method to the Todoist class to print the list of all the tasks. The print format is
-one task per line. For each task print its title, name of the person, time to complete, Important or
-Not Important, Urgent or Not Urgent, task status i.e, todo or done.
-2 test case files input006, input007 must pass for the 2 marks to be awarded. Main method is
-already provided and handles the input and output.*/
-
 class Todoist {
     Task[] t;
     int size;

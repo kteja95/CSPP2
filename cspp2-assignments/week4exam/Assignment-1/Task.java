@@ -1,14 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * Class for task.
+ * task class
  */
-
- /**Create a class named Task with its 6 properties. Add an overloaded constructor with the
-parameters String title, String assignedTo, int timeToComplete, boolean important, boolean
-urgent, String status. Also, add a toString method to display the Task object.
-The first 3 test case files input000, input001, input002 must pass for the 2 marks to be awarded.
-Main method is already provided and handles the input and output.*/
 class Task {
 	String title;
 	String assignedTo;
