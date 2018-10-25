@@ -5,7 +5,6 @@ import java.util.Arrays;
      * An array would be good. Right?
      * So, when we do not what we are going to have in the list
      * We need to create a Generic list to store the items
-
      * Here E is a type parameter, and it will be replaced with
         actual type when the object got created.
      */
@@ -34,8 +33,7 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        // list[(size++)] = item;
-        if (size == list.length) {
+        if(size == list.length){
             resize();
         }
         list[(size++)] = item;
@@ -43,18 +41,15 @@ public class List<E> {
     /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
-        //Write logic for addAll method
-        for (E i:items) {
+        for(E i:items){
             add(i);
+        }
     }
-}
     /**
      * { function_description }
      */
-    private void resize() {
-        int cap = 2 * size;
-        // int[] arr = new int[cap];
-        list = Arrays.copyOf(list, cap);
+    private void resize(){
+        Arrays.copyOf(list,2*size);
     }
 
     /*
@@ -65,7 +60,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return size;
+        return size;
     }
     /*
      * The remove method does what the name suggests.
@@ -88,16 +83,14 @@ public class List<E> {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        //Write logic for remove method
-         //Write logic for remove method
         if (index >= 0 && index < size) {
-        for (int i = index; i < size - 1; i++) {
-            list[i] = list[i + 1];
+            for(int i = index; i < size-1; i++) {
+                list[i] = list[i+1];
+            }
+            size--;
+        }else{
+            System.out.println("Invalid Position Exception");
         }
-        size--;
-    } else {
-        System.out.println("Invalid Position Exception");
-    }
     }
     /*
      * Get method has to return the items that is
@@ -111,9 +104,7 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
-        // return list[index];
-        if (index >= 0 && index < size) {
+        if(index>=0 && index < size){
             return list[index];
         }
         return null;
@@ -139,16 +130,14 @@ public class List<E> {
      *
      */
     public String toString() {
-
-       if (size == 0) {
+        if(size == 0){
             return "[]";
         }
-       String res = "[";
-        for (int i = 0; i < size - 1; i++) {
-            res = res + list[i] + ",";
-        }
-        res += list[size - 1] + "]";
-        return res;
+        String s = "[";
+        for(int i = 0;i<size-1;i++){
+            s += list[i]+",";
+        }s += list[size-1]+"]";
+        return s;
     }
     /*
      * Contains return true if the list has
@@ -157,9 +146,7 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
-        int res = indexOf(item);
-        if (res >= 0) {
+        if(indexOf(item) != -1){
             return true;
         }
         return false;
@@ -172,11 +159,10 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
-        for (int i = 0; i<size;i++) {
-            if (list[i].equals(item)) {
+       for(int i = 0;i<size;i++){
+            if(list[i].equals(item)){
                 return i;
-            }
+            }   
         }
         return -1;
     }
@@ -184,17 +170,18 @@ public class List<E> {
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] newArray)
-    {
-        for (int i = 0; i < newArray.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if (newArray[i] == list[j]) {
-                remove(j);
-                j--;
-            }
-            // if (newArray[i] == list[j]) {
-            //     remove(j);
-            //     j--;
+    public void removeAll(E[] items)
+    {   
+        boolean check;
+        for(int i = 0;i<items.length;i++){
+            check = contains(items[i]);
+            if(check) {
+                for(int j = 0;j<list.length;j++){
+                    if(list[j] == items[i]){
+                        remove(j);
+                        j--;
+                    }
+                }
             }
         }
     }
@@ -204,47 +191,31 @@ public class List<E> {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-    public List subList(int start, int end) {
+    public List subList(int n, int n2) {
+        
+        if(n<0 || n2 < 0 || n>n2 || n > size || n == n2){
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        else{
+        List list1 = new List();
+        for(int i = n;i<n2;i++){
+            list1.add(list[i]);
+        }
 
-        if (start < 0) {
-        System.out.println("Index Out of Bounds Exception");
-         return null;
-        }
-        if (end < 0) {
-        System.out.println("Index Out of Bounds Exception");
-         return null;
-        }
-        if (end > size()) {
-        System.out.println("Index Out of Bounds Exception");
-         return null;
-        }
-        if (start == end) {
-        System.out.println("Index Out of Bounds Exception");
-         return null;
-        }
-        if (start > end) {
-        System.out.println("Index Out of Bounds Exception");
-         return null;
-        }
-        List<E> list1 = new List();
-        for (int i = start; i < end; i++) {
-            list1.add(this.get(i));
-        }
         return list1;
+        }
     }
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
     public boolean equals(List<E> listdata)
     {
-        return this.toString().equals(listdata.toString());
+        return toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
     public void clear()
     {
-        // for (int i = 0; i < size; i++) {
-        //     list[i] = 0;
-        // }
         size = 0;
     }
 }
