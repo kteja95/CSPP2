@@ -3,18 +3,18 @@ import java.util.*;
 import java.util.Arrays;
 interface StringListInterface
 {
-	 public void add(String item);
-	 public void addAll(String items[]);
-	 public String get(int index);
-	 public int size();
-	 public void remove(int index);
-	 public boolean contains(String item);
-	 public int indexOf(String item);
+     public void add(String item);
+     public void addAll(String items[]);
+     public String get(int index);
+     public int size();
+     public void remove(int index);
+     public boolean contains(String item);
+     public int indexOf(String item);
 }
 //Write a StringList class which implements StringListInterface 
 
 public class StringList implements StringListInterface{
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -134,8 +134,8 @@ public class StringList implements StringListInterface{
             list[i] = items[j];
             j++;
             size += 1;
-        }		
-	}
+        }       
+    }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
