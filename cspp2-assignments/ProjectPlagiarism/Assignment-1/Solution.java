@@ -1,116 +1,147 @@
-import java.util.*;
-import java.io.*;
-// import java.util.Map;
-// import java.util.Collections;
-class plagiarism {
-public HashMap frequency(String f) {
-    HashMap<String, Integer> map = new HashMap<String, Integer>();
-    try{
-        BufferedReader reader = new BufferedReader(new FileReader(f));
-        String line = reader.readLine();
-        while(line!=null) {
-            String[] word = line.split(" ");
-            for(int i=0;i<word.length;i++) {
-                word[i] = word[i].replaceAll("[!@#$?%^&*()-.]", "").trim().toLowerCase();
-                if(word[i].length()>0) {
-                    if(map.containsKey(word[i])) {
-                        map.put(word[i], map.get(word[i])+1);
-                    } map.putIfAbsent(word[i], 1);
+import java.util.Scanner;
+import java.util.HashMap;
+import java.io.FileReader;
+import java.io.File;
+import java.io.BufferedReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+/**
+ * Class for plagiarism.
+ */
+class Plagiarism {
+    /**
+     * { function_description }.
+     *
+     * @param      filename  The filename
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public HashMap map(final File filename) {
+        /**
+         * { var_description }.
+         */
+        HashMap<String, Integer> hm = new HashMap();
+        String data = "";
+        try {
+            BufferedReader b = new BufferedReader(new FileReader(filename));
+            String str = b.readLine();
+            while (str != null) {
+                data += str;
+                str = b.readLine();
             }
-
+            Pattern r = Pattern.compile("[^a-z A-Z 0-9]");
+            Matcher m = r.matcher(data);
+            String temp = m.replaceAll("").replace(".", " ").toLowerCase();
+            String[] line = temp.split(" ");
+            if (temp.length() > 0) {
+            for (int i = 0; i < line.length; i++) {
+                if (hm.containsKey(line[i])) {
+                    hm.put(line[i], hm.get(line[i]) + 1);
+                } else {
+                    hm.put(line[i], 1);
+                }
             }
-            line = reader.readLine();
+            }
+        }  catch (Exception e) {
+            System.out.println(e);
         }
-    } catch (Exception e) {
-        System.out.println(e);
+        return hm;
     }
-    return map;
-    }
-
-}
-class dotp {
-    public int dotproduct(HashMap<String, Integer> h1, HashMap<String, Integer> h2) {
-        HashMap<String, Integer> hashmap1, hashmap2;
-        hashmap1 = h1;
-        hashmap2 = h2;
-        int product = 0;
-        for(String words : hashmap1.keySet()) {
-            if(hashmap2.containsKey(words)) {
-                product = product + hashmap1.get(words) * hashmap2.get(words);
-            }
-        }
-        return product;
-    }
-}
-class solution {
-    public static void main(String[] args) {
-        plagiarism p = new plagiarism();
-        HashMap<String, Integer> first = p.frequency("Test/File3.txt");
-        // Map<String, Integer> syncMap = Collections.synchronizedMap(first);
-        // System.out.println(syncMap);
-        double squares = 0;
-        int distance;
+    /**
+     * { function_description }.
+     *
+     * @param      hm1   The hm 1
+     * @param      hm2   The hm 2
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public double similarity(final HashMap<String, Integer> hm1,
+        final HashMap<String, Integer> hm2) {
+        double frequencyvector1 = 0, frequencyvector2 = 0;
         double similarity;
-        // HashMap<String, Integer> second = p.frequency("Test/File4.txt");
-        // first.putAll(second);
-        // System.out.println(first);
-        System.out.println(first);
-        for(int i : first.values()) {
-            squares = squares + Math.pow(i, 2);
+        int dotproduct = 0;
+        for (int i : hm1.values()) {
+            frequencyvector1 = frequencyvector1 + Math.pow(i, 2);
         }
-        squares = Math.sqrt(squares);
-        HashMap<String, Integer> second = p.frequency("Test/File4.txt");
-        double squares1 = 0;
-        System.out.println(second);
-        for(int i : second.values()) {
-            squares1 = squares1 + Math.pow(i, 2);
+        frequencyvector1 = Math.sqrt(frequencyvector1);
+        for (int i : hm2.values()) {
+            frequencyvector2 = frequencyvector2 + Math.pow(i, 2);
         }
-        squares1 = Math.sqrt(squares1);
-        dotp d = new dotp();
-        distance = d.dotproduct(first, second);
-        similarity = distance / (squares * squares1);
-        System.out.println(similarity*100);
+        frequencyvector2 = Math.sqrt(frequencyvector2);
+        for (String i : hm1.keySet()) {
+            if (hm2.containsKey(i)) {
+                dotproduct = dotproduct + hm1.get(i) * hm2.get(i);
+            }
+        }
+        similarity = dotproduct / (frequencyvector2 * frequencyvector1);
+        return similarity;
     }
 }
-
-
-
-// // class Solution {
-// //     public static void main(String[] args) {
-        
-// //     }
-// // }
-// // class bye {
-// //     Solution h = new Solution();
-// //     System.out.println(h);
-// // }
-
-// class Solution {
-//     public static void main(String[] args) {
-//         HashMap<String, Integer> map = new HashMap<String, Integer>();
-//         map.put("one", 1);
-//         map.put("two", 2);
-//         map.put("three", 3);
-//         map.put("four", 4);
-//         System.out.println(map);
-//         HashMap<String, Integer> map1 = new HashMap<String, Integer>(map);
-//         map1.put("hundred", 100);
-//         map1.put("hello", 133213);
-//         map.putAll(map1);
-//         // Collections.sort(map);
-//         // map.clear();
-//         // System.out.println(map);
-//         // System.out.println("*********");
-//         // System.out.println(map.size());
-//         // System.out.println(map1);
-//         // System.out.println(map1.remove("hello"));
-//         // System.out.println(map1);
-//         // map1.putIfAbsent("two", 22);
-//         // map1.putIfAbsent("ten", 10);
-//         // Map<String, Integer> syncMap = Collections.synchronizedMap(map1);
-//         // System.out.println(syncMap);
-//     }
-// }
-
-// // HashTable is synchronized....thread
-// // HasMap is not synchronized...thread
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //pass
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String foldername;
+        long maximum = 0;
+        try {
+            foldername = sc.nextLine();
+        } catch (Exception e) {
+            System.out.println("empty directory");
+            return;
+        }
+        File dir = new File(foldername);
+        File[] filearray = dir.listFiles();
+        HashMap[] hashmaparray = new HashMap[filearray.length];
+        Plagiarism p = new Plagiarism();
+        int temp = 0;
+        final int except = 100;
+        File file1 = null, file2 = null;
+        long[][] result = new long[filearray.length][filearray.length];
+        for (File print : filearray) {
+            hashmaparray[temp] = p.map(print);
+            temp++;
+        }
+        for (int i = 0; i < filearray.length; i++) {
+            for (int j = 0; j < filearray.length; j++) {
+                result[i][j] = Math.round(p.similarity(hashmaparray[i],
+                    hashmaparray[j]) * except);
+                if (maximum < result[i][j]
+                    && result[i][j] != except) {
+                    maximum = result[i][j];
+                    file1 = filearray[i];
+                    file2 = filearray[j];
+                }
+            }
+        }
+        System.out.print("      \t\t");
+        for (int i = 0; i < filearray.length; i++) {
+            System.out.print(filearray[i].toString()
+                .split("\\\\")[1] + "\t");
+        }
+        System.out.println();
+        for (int i = 0; i < filearray.length; i++) {
+            System.out.print(filearray[i].toString()
+                .split("\\\\")[1] + "\t");
+            for (int j = 0; j < filearray.length; j++) {
+                System.out.print(result[i][j] + "\t\t");
+            }
+            System.out.println();
+        }
+        System.out.println("Maximum similarity is between "
+            + file1.toString().split("\\\\")[1] + " and "
+            + file2.toString().split("\\\\")[1]);
+    }
+}
