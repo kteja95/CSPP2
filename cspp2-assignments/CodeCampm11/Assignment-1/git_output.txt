@@ -1,0 +1,6 @@
+[master c054720] "m11_a1: 3/3 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 1 file changed, 9 deletions(-)
+ rewrite cspp2-assignments/CodeCampm11/Assignment-1/git_output.txt (100%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/kteja95/CSPP2.git
+   963db15..c054720  master -> master
