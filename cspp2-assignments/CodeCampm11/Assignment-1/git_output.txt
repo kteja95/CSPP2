@@ -1,0 +1,9 @@
+[master d5d86a5] "m11_a1: 3/3 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 5 files changed, 507 insertions(+), 438 deletions(-)
+ rewrite cspp2-assignments/CodeCampm11/Assignment-1/List.class (94%)
+ create mode 100644 cspp2-assignments/CodeCampm11/Assignment-1/check_style_errors.txt
+ create mode 100644 cspp2-assignments/CodeCampm11/Assignment-1/git_output.txt
+ create mode 100644 cspp2-assignments/CodeCampm11/Assignment-1/testcases_output.txt
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/kteja95/CSPP2.git
+   3169196..d5d86a5  master -> master
