@@ -1,0 +1,5 @@
+[master 05b3345] "list_homework: 3/3 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/kteja95/CSPP2.git
+   9fb4ab1..05b3345  master -> master
