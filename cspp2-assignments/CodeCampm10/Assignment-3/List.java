@@ -9,11 +9,9 @@ import java.util.Scanner;
      * An array would be good. Right?
      * So, when we do not what we are going to have in the list
      * We need to create a Generic list to store the items
-
-     * Here E is a type parameter, and it will be replaced with 
-        actual type when the object got created. 
+     * Here E is a type parameter, and it will be replaced with
+        actual type when the object got created.
      */
-/**. generic list of type class*/
 public class List<E> {
     private E[] list;
     private int size;
@@ -36,29 +34,29 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    public void resize() {
+        list = Arrays.copyOf(list, 2 * list.length);
+    }
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        if (list.length == size) {
+        if (size == list.length) {
             resize();
         }
         list[(size++)] = item;
     }
-    private void resize() {
-        list = Arrays.copyOf(list,2*size);
-    }
-    /*Inserts all the elements of specified int 
+    /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
-        for(E i:items)
-            add(i);
-
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
+        }
     }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -68,7 +66,7 @@ public class List<E> {
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -84,15 +82,24 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int idex) {
-        //Write logic for remove method
-        if (idex >= 0 && idex < size) {
-            for (int i = idex; i < size - 1; i++) {
-                list[i] = list[i + 1];
+    public void remove(int index) {
+        if (index >= size || index < 0) {
+            System.out.println("Invalid Position Exception");
+            return;
+        } else {
+            int newlen = list.length - index - 1;
+            E[] new1 = ((E[]) new Object[newlen]);
+            int j = 0;
+            for (int i = index + 1; i < list.length; i++) {
+                new1[j] = list[i];
+                j++;
+            }
+            int k = 0;
+            for (int i = index; i < list.length - 1; i++) {
+                list[i] = new1[k];
+                k++;
             }
             size--;
-        } else {
-            System.out.println("Invalid Position Exception");
         }
     }
     /*
@@ -103,18 +110,16 @@ public class List<E> {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
-        if (index >= 0 || index < size) {
-            
+        if (index <= size) {
             return list[index];
+        }
+        Integer one = new Integer(-1);
+        return (E) one;
     }
-    else
-        return null;
-}
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -124,7 +129,7 @@ public class List<E> {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -136,14 +141,12 @@ public class List<E> {
      *
      */
     public String toString() {
-        if(size == 0)
-            return "[]";
-        String str = "[";
-        int i = 0;
-        for(i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+        E[] stringlist = ((E[])(new Object[size]));
+        for (int i = 0; i < size; i++) {
+            stringlist[i] = list[i];
         }
-        return str + list[size - 1] + "]";
+        return Arrays.toString(stringlist).replaceAll(" ", "");
+
     }
     /*
      * Contains return true if the list has
@@ -152,25 +155,25 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-        //Write logic for contains method
-        if (indexOf(item) >= 0) {
-            return true;
+        for (int i = 0; i < size; i++) {
+            if (list[i].equals(item)) {
+                return true;
+            }
         }
         return false;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
     public int indexOf(E item) {
-       //Write logic for indexOf method
-          for (int i = 0; i < size; i++) {
-            if (item.equals(list[i])) {
-
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 return i;
             }
         }
         return -1;
+
     }
 }
