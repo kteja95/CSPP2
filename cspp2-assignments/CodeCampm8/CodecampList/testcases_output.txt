@@ -1,0 +1,42 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+2
+[5,-1]
+[5,-1,0,99]
+3
+[5,0,99]
+-1
+99
+true
+Your Output: 
+2
+[5,-1]
+[5,-1,0,99]
+3
+[5,0,99]
+-1
+99
+true
+----------------------------------------
+########## Testcase 1: Passed ##########
+Expected Output: 
+[8,12,97]
+4
+Invalid Position Exception
+[8,12,97,11]
+4
+0
+97
+1
+true
+Your Output: 
+[8,12,97]
+4
+Invalid Position Exception
+[8,12,97,11]
+4
+0
+97
+1
+true
+----------------------------------------
