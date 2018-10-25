@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] F:\msit\git\CSPP2\CSPP2\cspp2-assignments\ProjectPlagiarism\Stringmatching\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
