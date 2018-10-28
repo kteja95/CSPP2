@@ -1,151 +1,163 @@
-import java.util.Scanner;
-import java.util.HashMap;
-import java.io.FileReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.BufferedReader;
-import java.util.regex.Matcher;
+import java.util.Scanner;
 import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.HashMap;
+import java.util.ArrayList;
 /**
  * Class for plagiarism.
  */
 class Plagiarism {
     /**
-     * { function_description }.
-     *
-     * @param      filename  The filename
-     *
-     * @return     { description_of_the_return_value }
+     * {Array list of Hashmap}.
      */
-    public HashMap map(final File filename) {
-        /**
-         * { var_description }.
-         */
-        HashMap<String, Integer> hm = new HashMap();
-        String data = "";
-        try {
-            BufferedReader b = new BufferedReader(new FileReader(filename));
-            String str = b.readLine();
-            while (str != null) {
-                data += str;
-                str = b.readLine();
-            }
-            Pattern r = Pattern.compile("[^a-z A-Z 0-9]");
-            Matcher m = r.matcher(data);
-            String temp = m.replaceAll("").replace(".", " ").toLowerCase();
-            String[] line = temp.split(" ");
-            if (temp.length() > 0) {
-            for (int i = 0; i < line.length; i++) {
-                if (hm.containsKey(line[i])) {
-                    hm.put(line[i], hm.get(line[i]) + 1);
-                } else {
-                    hm.put(line[i], 1);
+    private ArrayList<HashMap> textList;
+    /**
+     * {Hashmap of freqencies}.
+     */
+    private HashMap<String, Integer> frequency;
+    /**
+     * Constructs the object.
+     */
+    Plagiarism() {
+        textList = new ArrayList<HashMap>();
+    }
+
+    /**
+     * {Method to load the words}.
+     *
+     * @param      text  The text
+     */
+    public void load(final String text) {
+        frequency = new HashMap<String, Integer>();
+        String[] words = text.split(" ");
+        for (String i : words) {
+            int count = 0;
+            for (String j : words) {
+                if (i.equals(j)) {
+                    count += 1;
                 }
             }
-            }
-        }  catch (Exception e) {
-            System.out.println(e);
+            frequency.put(i, count);
         }
-        return hm;
+        textList.add(frequency);
     }
     /**
-     * { function_description }.
-     *
-     * @param      hm1   The hm 1
-     * @param      hm2   The hm 2
-     *
-     * @return     { description_of_the_return_value }
+     * {Bag of Words}.
      */
-    public double similarity(final HashMap<String, Integer> hm1,
-        final HashMap<String, Integer> hm2) {
-        double frequencyvector1 = 0, frequencyvector2 = 0;
-        double similarity;
-        int dotproduct = 0;
-        for (int i : hm1.values()) {
-            frequencyvector1 = frequencyvector1 + Math.pow(i, 2);
-        }
-        frequencyvector1 = Math.sqrt(frequencyvector1);
-        for (int i : hm2.values()) {
-            frequencyvector2 = frequencyvector2 + Math.pow(i, 2);
-        }
-        frequencyvector2 = Math.sqrt(frequencyvector2);
-        for (String i : hm1.keySet()) {
-            if (hm2.containsKey(i)) {
-                dotproduct = dotproduct + hm1.get(i) * hm2.get(i);
+    public void bagofwords() {
+        ArrayList<int[]> bag = new ArrayList<int[]>();
+        int[] z = new int[1 + 2];
+        for (HashMap<String, Integer> i : textList) {
+            for (HashMap<String, Integer> j : textList) {
+                int totalcount = 0;
+                int count1 = 0;
+                int count2 = 0;
+                int[] b = new int[2 + 1];
+                for (String k : i.keySet()) {
+                    count1 += i.get(k) * i.get(k);
+                    count2 = 0;
+                    for (String l : j.keySet()) {
+                        count2 += j.get(l) * j.get(l);
+                        if (k.equals(l)) {
+                            totalcount += i.get(k) * j.get(l);
+                        }
+                    }
+                }
+                b[0] = count1 - 1;
+                b[1] = count2 - 1;
+                b[2] = totalcount - 1;
+                bag.add(b);
             }
         }
-        similarity = dotproduct / (frequencyvector2 * frequencyvector1);
-        return similarity;
+
+        int length = textList.size();
+        int c0 = length;
+        int c1 = 1;
+        System.out.print("      " + "\t\t");
+        for (int m = 1; m <= length; m++) {
+            System.out.print("File");
+            System.out.print(m);
+            System.out.print(".txt");
+            System.out.print("\t");
+        }
+        System.out.println();
+        for (int[] x : bag) {
+            if ((c0 % length) == 0) {
+                System.out.print("File");
+                System.out.print(c1);
+                System.out.print(".txt" + "\t");
+            }
+            final int number = 100;
+            long s = Math.round(
+                         x[2] / (Math.sqrt(x[0]) * Math.sqrt(x[1])) * number);
+            if (x[0] == 0 || x[1] == 0) {
+                System.out.print("0");
+            } else {
+                System.out.print(s);
+            }
+            if (z[0] < (int) s && (int) s != number) {
+                z[0] = (int) s;
+                z[2] = (int) (c0 - (length - 1)) / c1;
+                z[1] = c1;
+            }
+
+            System.out.print("\t\t");
+            c0++;
+            if ((c0 % length) == 0) {
+                System.out.println();
+                c1++;
+            }
+        }
+        if (z[1] != 0) {
+            System.out.println("Maximum similarity is between File"
+ + Integer.toString(z[1]) + ".txt and File" + Integer.toString(z[2]) + ".txt");
+        }
     }
 }
 /**
  * Class for solution.
  */
-final class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
-        //pass
+        //Empty.
     }
     /**
-     * { function_description }.
+     * {Main method}.
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  {Exception class}
      */
-    public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String foldername;
-        long maximum = 0;
+    public static void main(final String[] args) throws Exception {
+        Plagiarism pl = new Plagiarism();
+        Scanner scan = new Scanner(System.in);
         try {
-            foldername = sc.nextLine();
+            File folder = new File(scan.next());
+            File[] listOfFiles = folder.listFiles();
+            for (File i : listOfFiles) {
+                FileReader fr = new FileReader(i);
+                BufferedReader br = new BufferedReader(fr);
+                String buffer = "";
+                String s;
+                while (((s = br.readLine()) != null)) {
+                    buffer += s;
+                }
+                Pattern p = Pattern.compile("[^a-z A-Z 0-9]");
+                Matcher m = p.matcher(buffer);
+                String words = m.replaceAll("").replace(".", " ").toLowerCase();
+                br.close();
+                fr.close();
+                pl.load(words);
+            }
         } catch (Exception e) {
             System.out.println("empty directory");
-            return;
         }
-        File dir = new File(foldername);
-        File[] filearray = dir.listFiles();
-        HashMap[] hashmaparray = new HashMap[filearray.length];
-        Plagiarism p = new Plagiarism();
-        int temp = 0;
-        final int except = 100;
-        File file1 = null, file2 = null;
-        long[][] result = new long[filearray.length][filearray.length];
-        for (File print : filearray) {
-            hashmaparray[temp] = p.map(print);
-            temp++;
-        }
-        for (int i = 0; i < filearray.length; i++) {
-            for (int j = 0; j < filearray.length; j++) {
-                result[i][j] = Math.round(p.similarity(hashmaparray[i],
-                    hashmaparray[j]) * except);
-                if (maximum < result[i][j]
-                    && result[i][j] != except) {
-                    maximum = result[i][j];
-                    file1 = filearray[i];
-                    file2 = filearray[j];
-                }
-            }
-        }
-        System.out.print("      \t\t");
-        for (int i = 0; i < filearray.length; i++) {
-            System.out.print(filearray[i].toString()
-                .split("\\\\")[1] + "\t");
-        }
-        System.out.println();
-        for (int i = 0; i < filearray.length; i++) {
-            System.out.print(filearray[i].toString()
-                .split("\\\\")[1] + "\t");
-            for (int j = 0; j < filearray.length; j++) {
-                System.out.print(result[i][j] + "\t\t");
-            }
-            System.out.println();
-        }
-        System.out.println("Maximum similarity is between "
-            + file1.toString().split("\\\\")[1] + " and "
-            + file2.toString().split("\\\\")[1]);
+        pl.bagofwords();
     }
 }
-
-
-
-
