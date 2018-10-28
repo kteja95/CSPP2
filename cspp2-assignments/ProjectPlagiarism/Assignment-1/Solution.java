@@ -11,38 +11,39 @@ import java.util.ArrayList;
  */
 class Plagiarism {
     /**
-     * {Array list of Hashmap}.
+     * ArrayList of Hashmap.
      */
-    private ArrayList<HashMap> textList;
+    private ArrayList<HashMap> listOfWords;
+
     /**
-     * {Hashmap of freqencies}.
+     * Creating HashMap for words and it's frequency.
      */
-    private HashMap<String, Integer> frequency;
+    private HashMap<String, Integer> wordFrequency;
     /**
      * Constructs the object.
      */
     Plagiarism() {
-        textList = new ArrayList<HashMap>();
+        listOfWords = new ArrayList<HashMap>();
     }
 
     /**
      * {Method to load the words}.
      *
-     * @param      text  The text
+     * @param      inputtext  The inputtext
      */
-    public void load(final String text) {
-        frequency = new HashMap<String, Integer>();
-        String[] words = text.split(" ");
-        for (String i : words) {
+    public void load(final String inputtext) {
+        wordFrequency = new HashMap<String, Integer>();
+        String[] words = inputtext.split(" ");
+        for (String eachWord : words) {
             int count = 0;
-            for (String j : words) {
-                if (i.equals(j)) {
+            for (String comparingWord : words) {
+                if (eachWord.equals(comparingWord)) {
                     count += 1;
                 }
             }
-            frequency.put(i, count);
+            wordFrequency.put(eachWord, count);
         }
-        textList.add(frequency);
+        listOfWords.add(wordFrequency);
     }
     /**
      * {Bag of Words}.
@@ -50,8 +51,8 @@ class Plagiarism {
     public void bagofwords() {
         ArrayList<int[]> bag = new ArrayList<int[]>();
         int[] z = new int[1 + 2];
-        for (HashMap<String, Integer> i : textList) {
-            for (HashMap<String, Integer> j : textList) {
+        for (HashMap<String, Integer> i : listOfWords) {
+            for (HashMap<String, Integer> j : listOfWords) {
                 int totalcount = 0;
                 int count1 = 0;
                 int count2 = 0;
@@ -73,7 +74,7 @@ class Plagiarism {
             }
         }
 
-        int length = textList.size();
+        int length = listOfWords.size();
         int c0 = length;
         int c1 = 1;
         System.out.print("      " + "\t\t");
@@ -113,7 +114,8 @@ class Plagiarism {
         }
         if (z[1] != 0) {
             System.out.println("Maximum similarity is between File"
- + Integer.toString(z[1]) + ".txt and File" + Integer.toString(z[2]) + ".txt");
+                    + Integer.toString(z[1])
+                       + ".txt and File" + Integer.toString(z[2]) + ".txt");
         }
     }
 }
@@ -125,7 +127,7 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        //Empty.
+        //Empty Constructor.
     }
     /**
      * {Main method}.
@@ -135,29 +137,30 @@ public final class Solution {
      * @throws     Exception  {Exception class}
      */
     public static void main(final String[] args) throws Exception {
-        Plagiarism pl = new Plagiarism();
+        Plagiarism plagiarism = new Plagiarism();
         Scanner scan = new Scanner(System.in);
         try {
-            File folder = new File(scan.next());
-            File[] listOfFiles = folder.listFiles();
-            for (File i : listOfFiles) {
-                FileReader fr = new FileReader(i);
-                BufferedReader br = new BufferedReader(fr);
+            File foldername = new File(scan.next());
+            File[] listOfFiles = foldername.listFiles();
+            for (File eachFile : listOfFiles) {
+                FileReader readFile = new FileReader(eachFile);
+                BufferedReader fileasString = new BufferedReader(readFile);
                 String buffer = "";
-                String s;
-                while (((s = br.readLine()) != null)) {
-                    buffer += s;
+                String str;
+                while (((str = fileasString.readLine()) != null)) {
+                    buffer += str;
                 }
-                Pattern p = Pattern.compile("[^a-z A-Z 0-9]");
-                Matcher m = p.matcher(buffer);
-                String words = m.replaceAll("").replace(".", " ").toLowerCase();
-                br.close();
-                fr.close();
-                pl.load(words);
+                Pattern stringPattern = Pattern.compile("[^a-z A-Z 0-9]");
+                Matcher matcher = stringPattern.matcher(buffer);
+                String words = matcher.replaceAll("")
+                .replace(".", " ").toLowerCase();
+                fileasString.close();
+                readFile.close();
+                plagiarism.load(words);
             }
         } catch (Exception e) {
             System.out.println("empty directory");
         }
-        pl.bagofwords();
+        plagiarism.bagofwords();
     }
 }
